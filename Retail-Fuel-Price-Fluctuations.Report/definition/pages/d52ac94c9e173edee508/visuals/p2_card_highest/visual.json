@@ -3,9 +3,9 @@
   "name": "p2_card_highest",
   "position": {
     "x": 168,
-    "y": 68,
+    "y": 72,
     "z": 14000,
-    "height": 82,
+    "height": 68,
     "width": 265,
     "tabOrder": 14000
   },
@@ -46,7 +46,7 @@
             },
             "fontSize": {
               "expr": {
-                "Literal": "20D"
+                "Literal": "15D"
               }
             },
             "bold": {
@@ -111,7 +111,7 @@
             },
             "fontSize": {
               "expr": {
-                "Literal": "8D"
+                "Literal": "7.5D"
               }
             },
             "bold": {
@@ -168,7 +168,7 @@
             },
             "fontSize": {
               "expr": {
-                "Literal": "7.5D"
+                "Literal": "6.5D"
               }
             },
             "fontColor": {
@@ -186,58 +186,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'center'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "dropShadow": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#000000'"
-                    }
-                  }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "93D"
-                }
-              }
-            },
-            "blur": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
-            "angle": {
-              "expr": {
-                "Literal": {
-                  "Value": "135D"
-                }
-              }
-            },
-            "distance": {
-              "expr": {
-                "Literal": {
-                  "Value": "3D"
                 }
               }
             }
@@ -268,7 +216,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "6D"
                 }
               }
             }

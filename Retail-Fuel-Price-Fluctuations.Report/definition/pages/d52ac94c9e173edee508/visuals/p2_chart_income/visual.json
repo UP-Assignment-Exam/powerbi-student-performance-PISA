@@ -3,9 +3,9 @@
   "name": "p2_chart_income",
   "position": {
     "x": 168,
-    "y": 384,
+    "y": 356,
     "z": 17000,
-    "height": 150,
+    "height": 154,
     "width": 535,
     "tabOrder": 17000
   },
@@ -90,6 +90,11 @@
                   "Value": "true"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": "6.8D"
+              }
             }
           }
         }
@@ -103,6 +108,11 @@
                   "Value": "false"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": "6.8D"
+              }
             }
           }
         }
@@ -115,6 +125,11 @@
                 "Literal": {
                   "Value": "false"
                 }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": "6.8D"
               }
             }
           }
@@ -135,6 +150,11 @@
                 "Literal": {
                   "Value": "'Top'"
                 }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": "6.8D"
               }
             }
           }
@@ -168,7 +188,7 @@
             },
             "fontSize": {
               "expr": {
-                "Literal": "10D"
+                "Literal": "8.5D"
               }
             },
             "bold": {
@@ -186,58 +206,6 @@
                       "Value": "'#0B1E48'"
                     }
                   }
-                }
-              }
-            }
-          }
-        }
-      ],
-      "dropShadow": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#000000'"
-                    }
-                  }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "93D"
-                }
-              }
-            },
-            "blur": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
-            "angle": {
-              "expr": {
-                "Literal": {
-                  "Value": "135D"
-                }
-              }
-            },
-            "distance": {
-              "expr": {
-                "Literal": {
-                  "Value": "3D"
                 }
               }
             }
@@ -268,7 +236,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "6D"
                 }
               }
             }

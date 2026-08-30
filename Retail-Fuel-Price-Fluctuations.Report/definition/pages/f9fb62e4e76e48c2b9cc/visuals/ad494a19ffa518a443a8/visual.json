@@ -3,10 +3,10 @@
   "name": "ad494a19ffa518a443a8",
   "position": {
     "x": 168,
-    "y": 8,
+    "y": 12,
     "z": 7000,
-    "height": 56,
-    "width": 465,
+    "height": 52,
+    "width": 550,
     "tabOrder": 7000
   },
   "visual": {
@@ -19,10 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Global PISA Performance Overview",
+                    "value": "Global PISA Analysis",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "17pt",
+                      "fontSize": "16pt",
                       "fontWeight": "bold",
                       "color": "#0B1E48"
                     }
@@ -32,7 +32,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "International benchmark in Reading, Mathematics, and Science across 70+ participating economies",
+                    "value": "An overview of student performance in Reading, Mathematics and Science across countries/regions",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "8pt",
@@ -48,6 +48,19 @@
     },
     "visualContainerObjects": {
       "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
         {
           "properties": {
             "show": {

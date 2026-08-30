@@ -3,9 +3,9 @@
   "name": "p2_table_performance",
   "position": {
     "x": 168,
-    "y": 542,
+    "y": 518,
     "z": 19000,
-    "height": 138,
+    "height": 162,
     "width": 1092,
     "tabOrder": 19000
   },
@@ -131,7 +131,7 @@
             },
             "fontSize": {
               "expr": {
-                "Literal": "10D"
+                "Literal": "8.5D"
               }
             },
             "bold": {
@@ -149,58 +149,6 @@
                       "Value": "'#0B1E48'"
                     }
                   }
-                }
-              }
-            }
-          }
-        }
-      ],
-      "dropShadow": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#000000'"
-                    }
-                  }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "93D"
-                }
-              }
-            },
-            "blur": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
-            "angle": {
-              "expr": {
-                "Literal": {
-                  "Value": "135D"
-                }
-              }
-            },
-            "distance": {
-              "expr": {
-                "Literal": {
-                  "Value": "3D"
                 }
               }
             }
@@ -231,7 +179,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "6D"
                 }
               }
             }

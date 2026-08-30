@@ -3,10 +3,10 @@
   "name": "36eb98e4560a3a06fa85",
   "position": {
     "x": 168,
-    "y": 8,
+    "y": 12,
     "z": 7000,
-    "height": 56,
-    "width": 465,
+    "height": 52,
+    "width": 550,
     "tabOrder": 7000
   },
   "visual": {
@@ -19,10 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "PISA Socioeconomic & Subject Deep Dive",
+                    "value": "Deep Dive",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "17pt",
+                      "fontSize": "16pt",
                       "fontWeight": "bold",
                       "color": "#0B1E48"
                     }
@@ -32,7 +32,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Granular analysis of performance disparities by subject, income level, and national wealth (GDP)",
+                    "value": "Explore PISA performance in detail by subject and country",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "8pt",
@@ -48,6 +48,19 @@
     },
     "visualContainerObjects": {
       "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
         {
           "properties": {
             "show": {
