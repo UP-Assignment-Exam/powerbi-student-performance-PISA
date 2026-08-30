@@ -1,6 +1,14 @@
 table 'Table Meassure'
 	lineageTag: 57d45c8c-534f-4c7c-bb1d-924775fd2f68
 
+	measure 'Overall PISA Score' =
+			DIVIDE(
+			    [Average Math Score] + [Average Reading Score] + [Average Science Score],
+			    3
+			)
+		formatString: 0
+		lineageTag: 6c91d9a4-d5f4-474e-9c3e-af3ffecc79bc
+
 	measure 'Average Math Score' =
 			CALCULATE(
 			    AVERAGE('OECD PISA data'[Value]),
@@ -28,18 +36,6 @@ table 'Table Meassure'
 		formatString: 0
 		lineageTag: 071c5539-b854-49ba-8d01-2a9b843e318e
 
-	measure 'Overall PISA Score' =
-			DIVIDE(
-			    [Average Math Score] + [Average Reading Score] + [Average Science Score],
-			    3
-			)
-		formatString: 0
-		lineageTag: 6c91d9a4-d5f4-474e-9c3e-af3ffecc79bc
-
-	measure 'Overall Average Score' = [Overall PISA Score]
-		formatString: 0
-		lineageTag: a1102090-4009-4343-8144-bb19db83b997
-
 	measure 'Selected Subject Score' =
 			SWITCH(
 			    SELECTEDVALUE('OECD PISA data'[Pisa_Sub]),
@@ -51,6 +47,10 @@ table 'Table Meassure'
 			)
 		formatString: 0
 		lineageTag: 68d4ad88-9e19-4a29-8f77-533f3d6aaba1
+
+	measure 'Overall Average Score' = [Overall PISA Score]
+		formatString: 0
+		lineageTag: a1102090-4009-4343-8144-bb19db83b997
 
 	measure 'Participating Countries Count' = DISTINCTCOUNT('OECD PISA data'[LOCATION])
 		formatString: #,0
@@ -90,4 +90,6 @@ table 'Table Meassure'
 		source = Row("Column", BLANK())
 
 	annotation PBI_Id = 2a0b137cd70a4cb9acf8b29766acb610
+
 	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

@@ -38,7 +38,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "true"
+                "Value": "false"
               }
             }
           }
@@ -62,26 +62,6 @@
       "name": "RegisteredResources",
       "type": "RegisteredResources",
       "items": [
-        {
-          "name": "book1442070796905971.png",
-          "path": "book1442070796905971.png",
-          "type": "Image"
-        },
-        {
-          "name": "house-key2542803580828933.png",
-          "path": "house-key2542803580828933.png",
-          "type": "Image"
-        },
-        {
-          "name": "icons8-data-encryption-50_(1)09014392739393906.png",
-          "path": "icons8-data-encryption-50_(1)09014392739393906.png",
-          "type": "Image"
-        },
-        {
-          "name": "icons8-data-encryption-5010104733533746657.png",
-          "path": "icons8-data-encryption-5010104733533746657.png",
-          "type": "Image"
-        },
         {
           "name": "icons8-globe-504092992886697814.png",
           "path": "icons8-globe-504092992886697814.png",

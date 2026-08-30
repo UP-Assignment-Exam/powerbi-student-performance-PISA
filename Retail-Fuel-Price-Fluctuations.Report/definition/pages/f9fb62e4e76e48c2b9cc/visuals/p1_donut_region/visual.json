@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p1_donut_region",
   "position": {
-    "x": 718,
-    "y": 428,
-    "z": 18000,
-    "height": 250,
+    "x": 718.95236642020086,
+    "y": 460.57142857142884,
+    "z": 19000,
+    "height": 248,
     "width": 542,
-    "tabOrder": 18000
+    "tabOrder": 19000
   },
   "visual": {
     "visualType": "donutChart",
@@ -69,11 +69,6 @@
                   "Value": "'Category, percent of total'"
                 }
               }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "7D"
-              }
             }
           }
         }
@@ -117,11 +112,6 @@
                 }
               }
             },
-            "fontSize": {
-              "expr": {
-                "Literal": "8.5D"
-              }
-            },
             "bold": {
               "expr": {
                 "Literal": {
@@ -158,7 +148,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E2E8F0'"
+                      "Value": "'#CBD5E1'"
                     }
                   }
                 }
@@ -167,7 +157,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
+                  "Value": "10D"
                 }
               }
             }

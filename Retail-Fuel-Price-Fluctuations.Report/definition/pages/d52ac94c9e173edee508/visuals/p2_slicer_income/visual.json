@@ -4,10 +4,10 @@
   "position": {
     "x": 1105,
     "y": 8,
-    "z": 13000,
+    "z": 10000,
     "height": 54,
     "width": 150,
-    "tabOrder": 13000
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "slicer",
@@ -63,11 +63,6 @@
                 "Literal": {
                   "Value": "'Segoe UI'"
                 }
-              }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": "8D"
               }
             },
             "fontColor": {

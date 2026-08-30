@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p1_line_subjects",
   "position": {
-    "x": 168,
-    "y": 174,
-    "z": 15000,
-    "height": 246,
+    "x": 168.95236642020089,
+    "y": 206.57142857142858,
+    "z": 16000,
+    "height": 244,
     "width": 535,
-    "tabOrder": 15000
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "lineChart",
@@ -90,11 +90,6 @@
                   "Value": "true"
                 }
               }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "7D"
-              }
             }
           }
         }
@@ -115,49 +110,18 @@
                   "Value": "'TopRight'"
                 }
               }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "7D"
-              }
             }
           }
         }
       ],
       "valueAxis": [
         {
-          "properties": {
-            "showTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "7D"
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "categoryAxis": [
         {
-          "properties": {
-            "showTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "7D"
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     },
@@ -184,11 +148,6 @@
                 "Literal": {
                   "Value": "'Segoe UI'"
                 }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "8.5D"
               }
             },
             "bold": {
@@ -227,7 +186,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E2E8F0'"
+                      "Value": "'#CBD5E1'"
                     }
                   }
                 }
@@ -236,7 +195,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
+                  "Value": "10D"
                 }
               }
             }

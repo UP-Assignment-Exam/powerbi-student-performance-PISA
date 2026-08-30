@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p1_map_region",
   "position": {
-    "x": 168,
-    "y": 428,
-    "z": 17000,
-    "height": 250,
+    "x": 168.95236642020089,
+    "y": 460.57142857142884,
+    "z": 18000,
+    "height": 248,
     "width": 535,
-    "tabOrder": 17000
+    "tabOrder": 18000
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "barChart",
     "query": {
       "queryState": {
         "Category": {
@@ -50,27 +50,27 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Table Meassure"
+                  }
+                },
+                "Property": "Overall PISA Score"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
-      "labels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "7D"
-              }
-            }
-          }
-        }
-      ],
       "dataPoint": [
         {
           "properties": {
@@ -84,41 +84,36 @@
                   }
                 }
               }
-            }
-          }
-        }
-      ],
-      "valueAxis": [
-        {
-          "properties": {
-            "showTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
             },
-            "fontSize": {
-              "expr": {
-                "Literal": "7D"
-              }
-            }
-          }
-        }
-      ],
-      "categoryAxis": [
-        {
-          "properties": {
-            "showTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+            "fillRule": {
+              "linearGradient2": {
+                "min": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'minColor'"
+                      }
+                    }
+                  }
+                },
+                "max": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'maxColor'"
+                      }
+                    }
+                  }
+                },
+                "nullColoringStrategy": {
+                  "strategy": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'asZero'"
+                      }
+                    }
+                  }
                 }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "7D"
               }
             }
           }
@@ -148,11 +143,6 @@
                 "Literal": {
                   "Value": "'Segoe UI'"
                 }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "8.5D"
               }
             },
             "bold": {
@@ -191,7 +181,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E2E8F0'"
+                      "Value": "'#CBD5E1'"
                     }
                   }
                 }
@@ -200,7 +190,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
+                  "Value": "10D"
                 }
               }
             }

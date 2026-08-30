@@ -4,10 +4,10 @@
   "position": {
     "x": 8,
     "y": 122,
-    "z": 2000,
+    "z": 3000,
     "height": 40,
     "width": 142,
-    "tabOrder": 2001
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "actionButton",
@@ -120,11 +120,6 @@
                 "Literal": {
                   "Value": "'Segoe UI'"
                 }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "10.5D"
               }
             },
             "bold": {

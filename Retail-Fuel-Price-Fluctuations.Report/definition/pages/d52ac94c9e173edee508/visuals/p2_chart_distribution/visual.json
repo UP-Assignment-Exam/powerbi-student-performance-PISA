@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p2_chart_distribution",
   "position": {
-    "x": 168,
-    "y": 152,
-    "z": 15000,
-    "height": 200,
+    "x": 166.33328247070313,
+    "y": 174.33335876464844,
+    "z": 16000,
+    "height": 250,
     "width": 535,
-    "tabOrder": 15000
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "columnChart",
@@ -72,38 +72,12 @@
       ],
       "valueAxis": [
         {
-          "properties": {
-            "showTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "7D"
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "categoryAxis": [
         {
-          "properties": {
-            "showTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "7D"
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     },
@@ -130,11 +104,6 @@
                 "Literal": {
                   "Value": "'Segoe UI'"
                 }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "8.5D"
               }
             },
             "bold": {
@@ -173,7 +142,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E2E8F0'"
+                      "Value": "'#CBD5E1'"
                     }
                   }
                 }
@@ -182,7 +151,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
+                  "Value": "10D"
                 }
               }
             }

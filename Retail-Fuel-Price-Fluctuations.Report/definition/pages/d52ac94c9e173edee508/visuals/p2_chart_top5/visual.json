@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p2_chart_top5",
   "position": {
-    "x": 718,
-    "y": 360,
-    "z": 18000,
-    "height": 154,
+    "x": 716.33328247070313,
+    "y": 438.33335876464844,
+    "z": 19000,
+    "height": 258,
     "width": 542,
-    "tabOrder": 18000
+    "tabOrder": 19000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -62,11 +62,6 @@
                   "Value": "true"
                 }
               }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "7D"
-              }
             }
           }
         }
@@ -90,38 +85,12 @@
       ],
       "valueAxis": [
         {
-          "properties": {
-            "showTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "7D"
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "categoryAxis": [
         {
-          "properties": {
-            "showTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "7D"
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     },
@@ -148,11 +117,6 @@
                 "Literal": {
                   "Value": "'Segoe UI'"
                 }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "8.5D"
               }
             },
             "bold": {
@@ -191,7 +155,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#E2E8F0'"
+                      "Value": "'#CBD5E1'"
                     }
                   }
                 }
@@ -200,7 +164,7 @@
             "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
+                  "Value": "10D"
                 }
               }
             }
