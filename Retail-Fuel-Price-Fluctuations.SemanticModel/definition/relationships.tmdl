@@ -1,0 +1,6 @@
+relationship 117d2a5f-fe0b-c6b1-d30d-3816736673f6
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: refined_dataset.Country_Code
+	toColumn: 'OECD PISA data'.LOCATION
+

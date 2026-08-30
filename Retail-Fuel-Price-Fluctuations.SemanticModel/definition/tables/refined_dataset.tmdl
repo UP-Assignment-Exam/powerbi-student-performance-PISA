@@ -1,0 +1,73 @@
+table refined_dataset
+	lineageTag: 9737b21a-2457-405e-8a7e-8a2dd041aaf1
+
+	column Country
+		dataType: string
+		lineageTag: 66696959-9b8a-4dc3-bc8e-05e5d7ed9734
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country_Code
+		dataType: string
+		lineageTag: 16ef70ef-80a1-4829-b7d6-5e7a8e4fdebf
+		summarizeBy: none
+		sourceColumn: Country_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 0d97cf2e-9866-4923-94f2-d4982aa9053d
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Indicator
+		dataType: string
+		lineageTag: 69afb051-3d3c-46d2-8071-99d16175b7f4
+		summarizeBy: none
+		sourceColumn: Indicator
+
+		annotation SummarizationSetBy = Automatic
+
+	column Education_Spending_Pct
+		dataType: double
+		lineageTag: 91182f72-e317-4df7-b2ec-18ea9b588db7
+		summarizeBy: sum
+		sourceColumn: Education_Spending_Pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Education_Level
+		dataType: string
+		lineageTag: c977213b-7455-4cb5-be54-0792b4f8c742
+		summarizeBy: none
+		sourceColumn: Education_Level
+
+		annotation SummarizationSetBy = Automatic
+
+	partition refined_dataset = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\USER\Downloads\refined_dataset.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Country", type text}, {"Country_Code", type text}, {"Year", Int64.Type}, {"Indicator", type text}, {"Value", type number}, {"Education_Level", type text}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each ([Education_Level] = "Total")),
+				    #"Uppercased Text" = Table.TransformColumns(#"Filtered Rows",{{"Country_Code", Text.Upper, type text}}),
+				    #"Uppercased Text1" = Table.TransformColumns(#"Uppercased Text",{{"Country_Code", Text.Upper, type text}}),
+				    #"Filtered Rows1" = Table.SelectRows(#"Uppercased Text1", each true),
+				    #"Renamed Columns" = Table.RenameColumns(#"Filtered Rows1",{{"Value", "Education_Spending_Pct"}, {"Country_Code", "Country_Code"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

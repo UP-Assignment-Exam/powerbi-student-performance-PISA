@@ -1,0 +1,111 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY25SU11",
+      "reportVersionAtImport": {
+        "visual": "2.4.0",
+        "report": "3.0.0",
+        "page": "2.3.0"
+      },
+      "type": "SharedResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "visible": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          },
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY25SU11",
+          "path": "BaseThemes/CY25SU11.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "book1442070796905971.png",
+          "path": "book1442070796905971.png",
+          "type": "Image"
+        },
+        {
+          "name": "house-key2542803580828933.png",
+          "path": "house-key2542803580828933.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-data-encryption-50_(1)09014392739393906.png",
+          "path": "icons8-data-encryption-50_(1)09014392739393906.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-data-encryption-5010104733533746657.png",
+          "path": "icons8-data-encryption-5010104733533746657.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-globe-504092992886697814.png",
+          "path": "icons8-globe-504092992886697814.png",
+          "type": "Image"
+        },
+        {
+          "name": "icons8-overview-489640387491032432.png",
+          "path": "icons8-overview-489640387491032432.png",
+          "type": "Image"
+        },
+        {
+          "name": "view-list3545223041655594.png",
+          "path": "view-list3545223041655594.png",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

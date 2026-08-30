@@ -1,0 +1,61 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 462.02635341193019,
+            "y": 472.46582487399655
+          },
+          "nodeIndex": "refined_dataset",
+          "nodeLineageTag": "9737b21a-2457-405e-8a7e-8a2dd041aaf1",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 186.47215596413031,
+            "y": 240.91311637413827
+          },
+          "nodeIndex": "OECD PISA data",
+          "nodeLineageTag": "3458e765-e14e-4901-ac03-181e53e0a299",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 194.72047438475852,
+            "y": 0
+          },
+          "nodeIndex": "Table Meassure",
+          "nodeLineageTag": "57d45c8c-534f-4c7c-bb1d-924775fd2f68",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 3
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 35.723911128792132,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

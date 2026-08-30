@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Retail-Fuel-Price-Fluctuations"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f2c338be-0daf-462a-b9ff-e281e26121ed"
+  }
+}

@@ -1,0 +1,103 @@
+table 'OECD PISA data'
+	lineageTag: 3458e765-e14e-4901-ac03-181e53e0a299
+
+	column index
+		dataType: int64
+		formatString: 0
+		lineageTag: 93b86444-a586-4989-9c65-a6d7424f50e1
+		summarizeBy: sum
+		sourceColumn: index
+
+		annotation SummarizationSetBy = Automatic
+
+	column LOCATION
+		dataType: string
+		lineageTag: 51404cdb-7a36-407f-9a24-60b75e2e6acc
+		summarizeBy: none
+		sourceColumn: LOCATION
+
+		annotation SummarizationSetBy = Automatic
+
+	column INDICATOR
+		dataType: string
+		lineageTag: 79899f62-747c-4934-ac27-5497c9ea1388
+		summarizeBy: none
+		sourceColumn: INDICATOR
+
+		annotation SummarizationSetBy = Automatic
+
+	column SUBJECT
+		dataType: string
+		lineageTag: 65ca3b94-de71-43ae-8cdf-39f3491598e6
+		summarizeBy: none
+		sourceColumn: SUBJECT
+
+		annotation SummarizationSetBy = Automatic
+
+	column TIME
+		dataType: int64
+		formatString: 0
+		lineageTag: 959e6cf4-6fb6-4dc1-aa81-9a4c8c46c0c4
+		summarizeBy: sum
+		sourceColumn: TIME
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value
+		dataType: double
+		lineageTag: d4721643-ae1c-458f-a40e-76733e0ec883
+		summarizeBy: sum
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Country Name' =
+			
+			LOOKUPVALUE(
+			    refined_dataset[Country],
+			    refined_dataset[Country_Code], 'OECD PISA data'[LOCATION]
+			)
+		lineageTag: f6e9162f-812d-4a8f-91c5-f7ed8b740a0c
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pisa_Sub =
+			
+			SWITCH(
+			    TRUE(),
+			    'OECD PISA data'[INDICATOR] = "PISAREAD", "Reading",
+			    'OECD PISA data'[INDICATOR] = "PISAMATH", "Mathematic",
+			    'OECD PISA data'[INDICATOR] = "PISASCIENCE", "Science"
+			)
+		lineageTag: b1266ce9-6b3c-4b35-ab48-8752021161dc
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'OECD PISA data' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\USER\Downloads\OECD PISA data.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"index", Int64.Type}, {"LOCATION", type text}, {"INDICATOR", type text}, {"SUBJECT", type text}, {"TIME", Int64.Type}, {"Value", type number}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each ([SUBJECT] = "TOT")),
+				    #"Uppercased Text" = Table.TransformColumns(#"Filtered Rows",{{"LOCATION", Text.Upper, type text}}),
+				    #"Filtered Rows1" = Table.SelectRows(#"Uppercased Text", each true),
+				    #"Merged Queries" = Table.NestedJoin(#"Filtered Rows1", {"LOCATION", "TIME"}, refined_dataset, {"Country_Code", "Year"}, "refined_dataset", JoinKind.Inner),
+				    #"Expanded refined_dataset" = Table.ExpandTableColumn(#"Merged Queries", "refined_dataset", {"Indicator", "Value", "Education_Level"}, {"refined_dataset.Indicator", "refined_dataset.Value", "refined_dataset.Education_Level"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Expanded refined_dataset",{{"refined_dataset.Value", "Education_Spending_Pct"}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Renamed Columns",{"refined_dataset.Education_Level", "refined_dataset.Indicator"}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Removed Columns",{{"Education_Spending_Pct", type number}}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Changed Type1",{"Education_Spending_Pct"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Removed Columns1",{{"LOCATION", "LOCATION"}})
+				in
+				    #"Renamed Columns1"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

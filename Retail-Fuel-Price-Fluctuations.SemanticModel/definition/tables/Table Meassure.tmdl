@@ -1,0 +1,92 @@
+table 'Table Meassure'
+	lineageTag: 57d45c8c-534f-4c7c-bb1d-924775fd2f68
+
+	measure 'Overall PISA Score' =
+			
+			AVERAGEX(
+			    SUMMARIZE('OECD PISA data', 'OECD PISA data'[LOCATION], 'OECD PISA data'[TIME]),
+			    CALCULATE(AVERAGE('OECD PISA data'[Value]), 'OECD PISA data'[INDICATOR] = "PISAMATH") +
+			    CALCULATE(AVERAGE('OECD PISA data'[Value]), 'OECD PISA data'[INDICATOR] = "PISAREAD") +
+			    CALCULATE(AVERAGE('OECD PISA data'[Value]), 'OECD PISA data'[INDICATOR] = "PISASCIENCE")
+			) / 3
+		lineageTag: 6c91d9a4-d5f4-474e-9c3e-af3ffecc79bc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average Math Score' =
+			
+			CALCULATE(
+			    AVERAGE('OECD PISA data'[Value]),
+			    'OECD PISA data'[INDICATOR] = "PISAMATH",
+			    'OECD PISA data'[SUBJECT] = "TOT"
+			)
+		formatString: 0
+		lineageTag: f477fd8e-26bd-4bd4-872c-b706fbefc591
+
+	measure 'Average Reading Score' =
+			
+			CALCULATE(
+			    AVERAGE('OECD PISA data'[Value]),
+			    'OECD PISA data'[INDICATOR] = "PISAREAD",
+			    'OECD PISA data'[SUBJECT] = "TOT"
+			)
+		formatString: 0
+		lineageTag: 9f235dbd-0aa1-4355-93bd-d8a4329a86cd
+
+	measure 'Average Science Score' =
+			
+			CALCULATE(
+			    AVERAGE('OECD PISA data'[Value]),
+			    'OECD PISA data'[INDICATOR] = "PISASCIENCE",
+			    'OECD PISA data'[SUBJECT] = "TOT"
+			)
+		formatString: 0
+		lineageTag: 071c5539-b854-49ba-8d01-2a9b843e318e
+
+	measure 'PISA Subjects' =
+			
+			DATATABLE(
+			    "Subject", STRING,
+			    {
+			        {"Mathematics"},
+			        {"Reading"},
+			        {"Science"}
+			    }
+			)
+		lineageTag: c3c3e1b5-87dd-4fce-881d-d70e17e2bd6f
+
+	measure 'Selected Subject Score' =
+			
+			SWITCH(
+			    SELECTEDVALUE('OECD PISA data'[Pisa_Sub]),
+			    "Mathematics", [Average Math Score],
+			    "Reading", [Average Reading Score],
+			    "Science", [Average Science Score],
+			    [Overall PISA Score]
+			)
+		lineageTag: 68d4ad88-9e19-4a29-8f77-533f3d6aaba1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Overall Average Score' = [Average Math Score] + [Average Reading Score] + [Average Science Score]
+		lineageTag: a1102090-4009-4343-8144-bb19db83b997
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		formatString: 0
+		lineageTag: 376769c5-5dc6-48df-9893-03dc17ab5461
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Table Meassure' = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 2a0b137cd70a4cb9acf8b29766acb610
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+
