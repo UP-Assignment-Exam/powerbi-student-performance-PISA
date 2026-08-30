@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "d84867b40c5eb5ca7b3d",
+  "name": "sb_logo_icon_p2",
   "position": {
-    "x": 13.333333333333334,
-    "y": 131.66666666666669,
-    "z": 9000,
-    "height": 28.333333333333336,
-    "width": 33.333333333333336,
-    "tabOrder": 9000
+    "x": 12,
+    "y": 18,
+    "z": 1000,
+    "height": 28,
+    "width": 28,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "image",
@@ -20,7 +20,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'icons8-overview-48.png'"
+                      "Value": "'icons8-globe-50.png'"
                     }
                   }
                 },
@@ -29,14 +29,14 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "icons8-overview-489640387491032432.png"
+                      "ItemName": "icons8-globe-504092992886697814.png"
                     }
                   }
                 },
                 "scaling": {
                   "expr": {
                     "Literal": {
-                      "Value": "'Normal'"
+                      "Value": "'Fit'"
                     }
                   }
                 }

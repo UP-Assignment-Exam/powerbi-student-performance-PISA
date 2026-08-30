@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "0941bda56f9ade08cb10",
+  "name": "sb_logo_text_p2",
   "position": {
-    "x": 73.75,
-    "y": 15,
+    "x": 44,
+    "y": 10,
     "z": 1000,
-    "height": 95,
-    "width": 102.5,
-    "tabOrder": 1000
+    "height": 52,
+    "width": 104,
+    "tabOrder": 1001
   },
   "visual": {
     "visualType": "textbox",
@@ -21,9 +21,10 @@
                   {
                     "value": "PISA",
                     "textStyle": {
-                      "fontFamily": "Cambria",
-                      "fontSize": "14pt",
-                      "color": "#ffffff"
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "13pt",
+                      "fontWeight": "bold",
+                      "color": "#e9f4f6"
                     }
                   }
                 ]
@@ -33,9 +34,9 @@
                   {
                     "value": "Global Analysis",
                     "textStyle": {
-                      "fontFamily": "Cambria",
-                      "fontSize": "14pt",
-                      "color": "#ffffff"
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "8pt",
+                      "color": "#9ea4ba"
                     }
                   }
                 ]

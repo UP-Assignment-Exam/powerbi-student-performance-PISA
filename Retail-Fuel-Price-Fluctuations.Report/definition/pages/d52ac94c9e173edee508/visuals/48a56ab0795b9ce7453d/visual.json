@@ -6,7 +6,7 @@
     "y": 0,
     "z": 0,
     "height": 720,
-    "width": 113.33333333333334,
+    "width": 150,
     "tabOrder": 0
   },
   "visual": {
@@ -41,12 +41,23 @@
       "fill": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
             "fillColor": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1F2D4D'"
+                      "Value": "'#021d4a'"
                     }
                   }
                 }
@@ -55,7 +66,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "0D"
                 }
               }
             }
@@ -64,9 +75,21 @@
             "id": "default"
           }
         }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "howCreated": "InsertVisualButton"
+  }
 }

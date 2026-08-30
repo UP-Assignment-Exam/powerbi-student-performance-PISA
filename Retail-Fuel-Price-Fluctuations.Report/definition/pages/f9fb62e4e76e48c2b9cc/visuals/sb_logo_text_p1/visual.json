@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "36eb98e4560a3a06fa85",
+  "name": "sb_logo_text_p1",
   "position": {
-    "x": 120,
+    "x": 44,
     "y": 10,
-    "z": 7000,
-    "height": 48,
-    "width": 380,
-    "tabOrder": 7000
+    "z": 1000,
+    "height": 52,
+    "width": 104,
+    "tabOrder": 1001
   },
   "visual": {
     "visualType": "textbox",
@@ -19,12 +19,12 @@
               {
                 "textRuns": [
                   {
-                    "value": "Deep Dive",
+                    "value": "PISA",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "20pt",
+                      "fontSize": "13pt",
                       "fontWeight": "bold",
-                      "color": "#0B1E48"
+                      "color": "#e9f4f6"
                     }
                   }
                 ]
@@ -32,11 +32,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Explore PISA performance in detail by subject and country",
+                    "value": "Global Analysis",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "8.5pt",
-                      "color": "#64748B"
+                      "fontSize": "8pt",
+                      "color": "#9ea4ba"
                     }
                   }
                 ]

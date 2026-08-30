@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "fe51e933097c19bf28c8",
   "position": {
-    "x": 15,
-    "y": 547.5,
+    "x": 8,
+    "y": 590,
     "z": 3000,
-    "height": 105,
-    "width": 160,
+    "height": 110,
+    "width": 134,
     "tabOrder": 3000
   },
   "visual": {
@@ -19,35 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Programme for International Student Assessment",
+                    "value": "Programme for\nInternational\nStudent Assessment\n\n© 2024 PISA Analysis",
                     "textStyle": {
-                      "fontFamily": "Cambria",
-                      "fontSize": "11pt",
-                      "color": "#ffffff"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "|",
-                    "textStyle": {
-                      "fontFamily": "Cambria",
-                      "fontSize": "11pt",
-                      "color": "#ffffff"
-                    }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "@ 2024 PISA Analysis",
-                    "textStyle": {
-                      "fontFamily": "Cambria",
-                      "fontSize": "11pt",
-                      "color": "#ffffff"
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "7.5pt",
+                      "color": "#9ea4ba"
                     }
                   }
                 ]

@@ -1,18 +1,29 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "6ee21def91e22b054c98",
+  "name": "sb_btn_overview_p2",
   "position": {
-    "x": 5,
-    "y": 140,
-    "z": 4000,
-    "height": 38.333333333333336,
-    "width": 130,
-    "tabOrder": 4000
+    "x": 8,
+    "y": 74,
+    "z": 2000,
+    "height": 40,
+    "width": 142,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "actionButton",
     "objects": {
       "icon": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
         {
           "properties": {
             "shapeType": {
@@ -27,7 +38,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'view-list.png'"
+                      "Value": "'icons8-overview-48.png'"
                     }
                   }
                 },
@@ -36,16 +47,44 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "view-list3545223041655594.png"
+                      "ItemName": "icons8-overview-489640387491032432.png"
                     }
                   }
                 },
                 "scaling": {
                   "expr": {
                     "Literal": {
-                      "Value": "'Normal'"
+                      "Value": "'Fit'"
                     }
                   }
+                }
+              }
+            },
+            "leftMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "8L"
+                }
+              }
+            },
+            "topMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "8L"
+                }
+              }
+            },
+            "bottomMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "8L"
+                }
+              }
+            },
+            "rightMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
                 }
               }
             }
@@ -79,14 +118,19 @@
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'Cambria'"
+                  "Value": "'Segoe UI'"
                 }
               }
             },
             "fontSize": {
               "expr": {
+                "Literal": "10.5D"
+              }
+            },
+            "bold": {
+              "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "false"
                 }
               }
             },
@@ -94,11 +138,24 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#9ea4ba'"
                     }
                   }
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            },
+            "leftMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "42L"
                 }
               }
             }
@@ -109,35 +166,21 @@
         },
         {
           "properties": {
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "16D"
-                }
-              }
-            },
             "fontColor": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FFFFFF'"
+                      "Value": "'#e9f4f6'"
                     }
                   }
                 }
               }
             },
-            "topMargin": {
+            "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "0L"
+                  "Value": "true"
                 }
               }
             }
@@ -150,16 +193,23 @@
       "shape": [
         {
           "properties": {
-            "roundEdge": {
+            "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "0L"
+                  "Value": "'rectangleRounded'"
+                }
+              }
+            },
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "6L"
                 }
               }
             }
           },
           "selector": {
-            "id": "hover"
+            "id": "default"
           }
         }
       ],
@@ -177,29 +227,52 @@
         },
         {
           "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#021d4a'"
+                    }
+                  }
+                }
+              }
+            },
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "23D"
+                  "Value": "100D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "fillColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#072b6b'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
           },
           "selector": {
             "id": "hover"
-          }
-        }
-      ],
-      "glow": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
           }
         }
       ],
@@ -213,25 +286,6 @@
                 }
               }
             }
-          }
-        },
-        {
-          "properties": {
-            "lineColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "hover"
           }
         }
       ]
@@ -250,14 +304,14 @@
             "type": {
               "expr": {
                 "Literal": {
-                  "Value": "'Bookmark'"
+                  "Value": "'PageNavigation'"
                 }
               }
             },
             "navigationSection": {
               "expr": {
                 "Literal": {
-                  "Value": "'d52ac94c9e173edee508'"
+                  "Value": "'f9fb62e4e76e48c2b9cc'"
                 }
               }
             }
@@ -266,6 +320,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "howCreated": "InsertVisualButton"
+  }
 }

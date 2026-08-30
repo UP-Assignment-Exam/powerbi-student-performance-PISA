@@ -2,42 +2,16 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "f05c32b4bae68eeab176",
   "position": {
-    "x": 695,
-    "y": 652.5,
+    "x": 585,
+    "y": 688,
     "z": 6000,
-    "height": 47.5,
-    "width": 145,
+    "height": 26,
+    "width": 110,
     "tabOrder": 6000
   },
   "visual": {
-    "visualType": "shape",
+    "visualType": "actionButton",
     "objects": {
-      "shape": [
-        {
-          "properties": {
-            "tileShape": {
-              "expr": {
-                "Literal": {
-                  "Value": "'pill'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "rotation": [
-        {
-          "properties": {
-            "shapeAngle": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            }
-          }
-        }
-      ],
       "text": [
         {
           "properties": {
@@ -47,11 +21,7 @@
                   "Value": "true"
                 }
               }
-            }
-          }
-        },
-        {
-          "properties": {
+            },
             "text": {
               "expr": {
                 "Literal": {
@@ -59,22 +29,51 @@
                 }
               }
             },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI'"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "8.5D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#475569'"
+                    }
+                  }
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "shape": [
+        {
+          "properties": {
+            "tileShape": {
+              "expr": {
+                "Literal": {
+                  "Value": "'pill'"
                 }
               }
             }
@@ -87,15 +86,28 @@
       "fill": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "fillColor": {
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.3
+                    "Literal": {
+                      "Value": "'#E2E8F0'"
                     }
                   }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -119,7 +131,35 @@
         }
       ]
     },
+    "visualContainerObjects": {
+      "visualLink": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'PageNavigation'"
+                }
+              }
+            },
+            "navigationSection": {
+              "expr": {
+                "Literal": {
+                  "Value": "'d52ac94c9e173edee508'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
-  },
-  "howCreated": "InsertVisualButton"
+  }
 }
