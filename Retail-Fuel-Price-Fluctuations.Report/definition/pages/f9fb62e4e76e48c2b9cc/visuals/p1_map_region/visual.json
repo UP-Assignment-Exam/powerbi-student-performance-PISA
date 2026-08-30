@@ -3,9 +3,9 @@
   "name": "p1_map_region",
   "position": {
     "x": 168,
-    "y": 418,
+    "y": 428,
     "z": 17000,
-    "height": 260,
+    "height": 250,
     "width": 535,
     "tabOrder": 17000
   },

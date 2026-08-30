@@ -3,7 +3,7 @@
   "name": "p2_chart_income",
   "position": {
     "x": 168,
-    "y": 356,
+    "y": 360,
     "z": 17000,
     "height": 154,
     "width": 535,
@@ -23,10 +23,10 @@
                       "Entity": "Country_Metadata"
                     }
                   },
-                  "Property": "Income_Group"
+                  "Property": "Income Group"
                 }
               },
-              "queryRef": "Country_Metadata.Income_Group",
+              "queryRef": "Country_Metadata.Income Group",
               "nativeQueryRef": "Income Group",
               "active": true
             }

@@ -3,9 +3,9 @@
   "name": "p1_card_science",
   "position": {
     "x": 608,
-    "y": 72,
+    "y": 68,
     "z": 14002,
-    "height": 88,
+    "height": 98,
     "width": 210,
     "tabOrder": 14002
   },
@@ -46,7 +46,7 @@
             },
             "fontSize": {
               "expr": {
-                "Literal": "17D"
+                "Literal": "15D"
               }
             },
             "bold": {

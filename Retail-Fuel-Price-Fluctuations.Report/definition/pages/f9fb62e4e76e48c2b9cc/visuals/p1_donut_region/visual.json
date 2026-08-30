@@ -3,9 +3,9 @@
   "name": "p1_donut_region",
   "position": {
     "x": 718,
-    "y": 418,
+    "y": 428,
     "z": 18000,
-    "height": 260,
+    "height": 250,
     "width": 542,
     "tabOrder": 18000
   },
@@ -84,20 +84,8 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
-              }
-            },
-            "position": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Right'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "7D"
               }
             }
           }

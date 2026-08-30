@@ -25,7 +25,7 @@ table Country_Metadata
 
 		annotation SummarizationSetBy = Automatic
 
-	column Income_Group
+	column 'Income Group'
 		dataType: string
 		lineageTag: e4f5a6b7-8c9d-0e1f-2a3b-4c5d6e7f8a9b
 		summarizeBy: none

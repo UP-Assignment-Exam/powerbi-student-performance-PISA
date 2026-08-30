@@ -3,7 +3,7 @@
   "name": "p2_chart_gdp_scatter",
   "position": {
     "x": 718,
-    "y": 148,
+    "y": 152,
     "z": 16000,
     "height": 200,
     "width": 542,
@@ -23,10 +23,10 @@
                       "Entity": "Country_Metadata"
                     }
                   },
-                  "Property": "Income_Group"
+                  "Property": "Income Group"
                 }
               },
-              "queryRef": "Country_Metadata.Income_Group",
+              "queryRef": "Country_Metadata.Income Group",
               "nativeQueryRef": "Income Group",
               "active": true
             }

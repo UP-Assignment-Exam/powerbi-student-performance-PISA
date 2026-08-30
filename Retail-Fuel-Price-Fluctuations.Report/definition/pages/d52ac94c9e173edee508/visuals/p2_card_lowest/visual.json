@@ -3,9 +3,9 @@
   "name": "p2_card_lowest",
   "position": {
     "x": 442,
-    "y": 72,
+    "y": 68,
     "z": 14001,
-    "height": 68,
+    "height": 76,
     "width": 265,
     "tabOrder": 14001
   },
@@ -46,7 +46,7 @@
             },
             "fontSize": {
               "expr": {
-                "Literal": "15D"
+                "Literal": "14D"
               }
             },
             "bold": {

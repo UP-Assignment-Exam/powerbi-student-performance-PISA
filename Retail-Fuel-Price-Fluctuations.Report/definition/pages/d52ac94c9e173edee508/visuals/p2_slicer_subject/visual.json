@@ -3,9 +3,9 @@
   "name": "p2_slicer_subject",
   "position": {
     "x": 905,
-    "y": 10,
+    "y": 8,
     "z": 12000,
-    "height": 52,
+    "height": 54,
     "width": 185,
     "tabOrder": 12000
   },
@@ -23,10 +23,10 @@
                       "Entity": "OECD PISA data"
                     }
                   },
-                  "Property": "Pisa_Sub"
+                  "Property": "PISA Subject"
                 }
               },
-              "queryRef": "OECD PISA data.Pisa_Sub",
+              "queryRef": "OECD PISA data.PISA Subject",
               "nativeQueryRef": "Subject",
               "active": true
             }

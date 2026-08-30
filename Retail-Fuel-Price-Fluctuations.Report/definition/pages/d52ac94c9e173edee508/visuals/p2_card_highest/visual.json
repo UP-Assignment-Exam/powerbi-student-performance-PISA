@@ -3,9 +3,9 @@
   "name": "p2_card_highest",
   "position": {
     "x": 168,
-    "y": 72,
+    "y": 68,
     "z": 14000,
-    "height": 68,
+    "height": 76,
     "width": 265,
     "tabOrder": 14000
   },
@@ -46,7 +46,7 @@
             },
             "fontSize": {
               "expr": {
-                "Literal": "15D"
+                "Literal": "14D"
               }
             },
             "bold": {

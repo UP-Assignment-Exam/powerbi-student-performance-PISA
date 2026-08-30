@@ -3,9 +3,9 @@
   "name": "ee902c99f99c79c04ba2",
   "position": {
     "x": 905,
-    "y": 10,
+    "y": 8,
     "z": 12000,
-    "height": 52,
+    "height": 54,
     "width": 185,
     "tabOrder": 12000
   },
@@ -23,10 +23,10 @@
                       "Entity": "OECD PISA data"
                     }
                   },
-                  "Property": "Country Name"
+                  "Property": "Country / Economy"
                 }
               },
-              "queryRef": "OECD PISA data.Country Name",
+              "queryRef": "OECD PISA data.Country / Economy",
               "nativeQueryRef": "Country / Economy",
               "active": true
             }

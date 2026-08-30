@@ -3,9 +3,9 @@
   "name": "dc9af5bcfae01c646a62",
   "position": {
     "x": 760,
-    "y": 10,
+    "y": 8,
     "z": 11000,
-    "height": 52,
+    "height": 54,
     "width": 130,
     "tabOrder": 11000
   },
@@ -23,10 +23,10 @@
                       "Entity": "OECD PISA data"
                     }
                   },
-                  "Property": "TIME"
+                  "Property": "Assessment Year"
                 }
               },
-              "queryRef": "OECD PISA data.TIME",
+              "queryRef": "OECD PISA data.Assessment Year",
               "nativeQueryRef": "Year",
               "active": true
             }
