@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "36eb98e4560a3a06fa85",
   "position": {
-    "x": 120,
-    "y": 10,
+    "x": 168,
+    "y": 8,
     "z": 7000,
-    "height": 48,
-    "width": 380,
+    "height": 56,
+    "width": 465,
     "tabOrder": 7000
   },
   "visual": {
@@ -19,10 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Deep Dive",
+                    "value": "PISA Socioeconomic & Subject Deep Dive",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "20pt",
+                      "fontSize": "17pt",
                       "fontWeight": "bold",
                       "color": "#0B1E48"
                     }
@@ -32,10 +32,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Explore PISA performance in detail by subject and country",
+                    "value": "Granular analysis of performance disparities by subject, income level, and national wealth (GDP)",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
-                      "fontSize": "8.5pt",
+                      "fontSize": "8pt",
                       "color": "#64748B"
                     }
                   }

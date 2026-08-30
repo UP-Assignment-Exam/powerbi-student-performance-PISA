@@ -56,18 +56,15 @@ table refined_dataset
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\USER\Downloads\refined_dataset.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("c:\Users\Damon\Documents\School\PowerBI\Research with AI\datasets\refined_dataset.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Country", type text}, {"Country_Code", type text}, {"Year", Int64.Type}, {"Indicator", type text}, {"Value", type number}, {"Education_Level", type text}}),
 				    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each ([Education_Level] = "Total")),
 				    #"Uppercased Text" = Table.TransformColumns(#"Filtered Rows",{{"Country_Code", Text.Upper, type text}}),
-				    #"Uppercased Text1" = Table.TransformColumns(#"Uppercased Text",{{"Country_Code", Text.Upper, type text}}),
-				    #"Filtered Rows1" = Table.SelectRows(#"Uppercased Text1", each true),
-				    #"Renamed Columns" = Table.RenameColumns(#"Filtered Rows1",{{"Value", "Education_Spending_Pct"}, {"Country_Code", "Country_Code"}})
+				    #"Renamed Columns" = Table.RenameColumns(#"Uppercased Text",{{"Value", "Education_Spending_Pct"}})
 				in
 				    #"Renamed Columns"
 
 	annotation PBI_ResultType = Table
 
 	annotation PBI_NavigationStepName = Navigation
-

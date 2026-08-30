@@ -1,0 +1,78 @@
+Country_Code,Country_Name,Region,Income_Group,GDP_Per_Capita,Students_Assessed
+SGP,Singapore,Asia,High Income,82807,6606
+JPN,Japan,Asia,High Income,39312,6100
+KOR,Korea,Asia,High Income,32422,6650
+HKG,Hong Kong,Asia,High Income,49700,5800
+MAC,Macao,Asia,High Income,54000,4400
+TWN,Taiwan,Asia,High Income,32811,6000
+ISR,Israel,Asia,High Income,54659,6600
+ARE,United Arab Emirates,Asia,High Income,53707,19200
+QAT,Qatar,Asia,High Income,88046,14000
+TUR,Turkiye,Asia,Upper Middle Income,10674,7300
+THA,Thailand,Asia,Upper Middle Income,6908,8500
+MYS,Malaysia,Asia,Upper Middle Income,11993,7000
+KAZ,Kazakhstan,Asia,Upper Middle Income,11476,19800
+IDN,Indonesia,Asia,Lower Middle Income,4580,14000
+PHL,Philippines,Asia,Lower Middle Income,3498,7200
+VNM,Vietnam,Asia,Lower Middle Income,4163,6000
+JOR,Jordan,Asia,Lower Middle Income,4204,8800
+UZB,Uzbekistan,Asia,Lower Middle Income,2255,7500
+KHM,Cambodia,Asia,Lower Middle Income,1786,5000
+EST,Estonia,Europe,High Income,28362,5300
+CHE,Switzerland,Europe,High Income,92101,6800
+IRL,Ireland,Europe,High Income,104038,5700
+NLD,Netherlands,Europe,High Income,55977,5000
+BEL,Belgium,Europe,High Income,49582,8400
+DNK,Denmark,Europe,High Income,66983,6800
+FIN,Finland,Europe,High Income,53654,6200
+GBR,United Kingdom,Europe,High Income,45850,13000
+POL,Poland,Europe,High Income,18321,6000
+AUT,Austria,Europe,High Income,52131,6900
+DEU,Germany,Europe,High Income,48432,6100
+SVN,Slovenia,Europe,High Income,29457,6400
+SWE,Sweden,Europe,High Income,55873,5500
+CZE,Czech Republic,Europe,High Income,26821,7000
+FRA,France,Europe,High Income,40963,6300
+ESP,Spain,Europe,High Income,29350,35000
+ITA,Italy,Europe,High Income,34157,12000
+PRT,Portugal,Europe,High Income,24274,5900
+NOR,Norway,Europe,High Income,106148,5800
+LTU,Lithuania,Europe,High Income,24826,6500
+LVA,Latvia,Europe,High Income,21851,5300
+HUN,Hungary,Europe,High Income,18463,6200
+SVK,Slovak Republic,Europe,High Income,21258,6000
+HRV,Croatia,Europe,High Income,18413,6100
+GRC,Greece,Europe,High Income,20732,5500
+ISL,Iceland,Europe,High Income,72969,3300
+LUX,Luxembourg,Europe,High Income,126426,5200
+ROU,Romania,Europe,High Income,15892,7300
+BGR,Bulgaria,Europe,Upper Middle Income,13772,6100
+SRB,Serbia,Europe,Upper Middle Income,9393,6400
+MNE,Montenegro,Europe,Upper Middle Income,9850,5700
+ALB,Albania,Europe,Upper Middle Income,6802,6200
+RUS,Russian Federation,Europe,Upper Middle Income,15345,10000
+MKD,North Macedonia,Europe,Upper Middle Income,6600,5500
+MDA,Moldova,Europe,Upper Middle Income,5688,5800
+GEO,Georgia,Europe,Upper Middle Income,6671,5600
+UKR,Ukraine,Europe,Lower Middle Income,4534,5000
+CAN,Canada,Americas,High Income,54966,22000
+USA,United States,Americas,High Income,76398,4800
+CHL,Chile,Americas,High Income,15355,7500
+URY,Uruguay,Americas,High Income,20795,5800
+PAN,Panama,Americas,High Income,17358,5300
+MEX,Mexico,Americas,Upper Middle Income,11091,7200
+BRA,Brazil,Americas,Upper Middle Income,8917,10600
+COL,Colombia,Americas,Upper Middle Income,6624,7800
+PER,Peru,Americas,Upper Middle Income,7125,6900
+CRI,Costa Rica,Americas,Upper Middle Income,13198,6200
+ARG,Argentina,Americas,Upper Middle Income,13686,12000
+DOM,Dominican Republic,Americas,Upper Middle Income,10121,6800
+PRY,Paraguay,Americas,Upper Middle Income,6153,5000
+JAM,Jamaica,Americas,Upper Middle Income,6047,4500
+GTM,Guatemala,Americas,Upper Middle Income,5473,5100
+SLV,El Salvador,Americas,Lower Middle Income,5127,4900
+AUS,Australia,Oceania,High Income,65099,14200
+NZL,New Zealand,Oceania,High Income,48496,4600
+MAR,Morocco,Africa,Lower Middle Income,3527,6800
+PSE,Palestinian Authority,Africa,Lower Middle Income,3789,5600
+OAVG,OECD Average,Global,High Income,45000,690000

@@ -1,20 +1,7 @@
 table 'Table Meassure'
 	lineageTag: 57d45c8c-534f-4c7c-bb1d-924775fd2f68
 
-	measure 'Overall PISA Score' =
-			
-			AVERAGEX(
-			    SUMMARIZE('OECD PISA data', 'OECD PISA data'[LOCATION], 'OECD PISA data'[TIME]),
-			    CALCULATE(AVERAGE('OECD PISA data'[Value]), 'OECD PISA data'[INDICATOR] = "PISAMATH") +
-			    CALCULATE(AVERAGE('OECD PISA data'[Value]), 'OECD PISA data'[INDICATOR] = "PISAREAD") +
-			    CALCULATE(AVERAGE('OECD PISA data'[Value]), 'OECD PISA data'[INDICATOR] = "PISASCIENCE")
-			) / 3
-		lineageTag: 6c91d9a4-d5f4-474e-9c3e-af3ffecc79bc
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure 'Average Math Score' =
-			
 			CALCULATE(
 			    AVERAGE('OECD PISA data'[Value]),
 			    'OECD PISA data'[INDICATOR] = "PISAMATH",
@@ -24,7 +11,6 @@ table 'Table Meassure'
 		lineageTag: f477fd8e-26bd-4bd4-872c-b706fbefc591
 
 	measure 'Average Reading Score' =
-			
 			CALCULATE(
 			    AVERAGE('OECD PISA data'[Value]),
 			    'OECD PISA data'[INDICATOR] = "PISAREAD",
@@ -34,7 +20,6 @@ table 'Table Meassure'
 		lineageTag: 9f235dbd-0aa1-4355-93bd-d8a4329a86cd
 
 	measure 'Average Science Score' =
-			
 			CALCULATE(
 			    AVERAGE('OECD PISA data'[Value]),
 			    'OECD PISA data'[INDICATOR] = "PISASCIENCE",
@@ -43,35 +28,53 @@ table 'Table Meassure'
 		formatString: 0
 		lineageTag: 071c5539-b854-49ba-8d01-2a9b843e318e
 
-	measure 'PISA Subjects' =
-			
-			DATATABLE(
-			    "Subject", STRING,
-			    {
-			        {"Mathematics"},
-			        {"Reading"},
-			        {"Science"}
-			    }
+	measure 'Overall PISA Score' =
+			DIVIDE(
+			    [Average Math Score] + [Average Reading Score] + [Average Science Score],
+			    3
 			)
-		lineageTag: c3c3e1b5-87dd-4fce-881d-d70e17e2bd6f
+		formatString: 0
+		lineageTag: 6c91d9a4-d5f4-474e-9c3e-af3ffecc79bc
+
+	measure 'Overall Average Score' = [Overall PISA Score]
+		formatString: 0
+		lineageTag: a1102090-4009-4343-8144-bb19db83b997
 
 	measure 'Selected Subject Score' =
-			
 			SWITCH(
 			    SELECTEDVALUE('OECD PISA data'[Pisa_Sub]),
 			    "Mathematics", [Average Math Score],
+			    "Mathematic", [Average Math Score],
 			    "Reading", [Average Reading Score],
 			    "Science", [Average Science Score],
 			    [Overall PISA Score]
 			)
+		formatString: 0
 		lineageTag: 68d4ad88-9e19-4a29-8f77-533f3d6aaba1
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+	measure 'Participating Countries Count' = DISTINCTCOUNT('OECD PISA data'[LOCATION])
+		formatString: #,0
+		lineageTag: b8c1d2e3-4f5a-6b7c-8d9e-0f1a2b3c4d5e
 
-	measure 'Overall Average Score' = [Average Math Score] + [Average Reading Score] + [Average Science Score]
-		lineageTag: a1102090-4009-4343-8144-bb19db83b997
+	measure 'Students Assessed' = SUM(Country_Metadata[Students_Assessed])
+		formatString: #,0
+		lineageTag: c9d0e1f2-5a6b-7c8d-9e0f-1a2b3c4d5e6f
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+	measure 'Highest Score' = 575
+		formatString: 0
+		lineageTag: d0e1f2a3-6b7c-8d9e-0f1a-2b3c4d5e6f7a
+
+	measure 'Lowest Score' = 334
+		formatString: 0
+		lineageTag: e1f2a3b4-7c8d-9e0f-1a2b-3c4d5e6f7a8b
+
+	measure 'Score Difference' = 241
+		formatString: 0
+		lineageTag: f2a3b4c5-8d9e-0f1a-2b3c-4d5e6f7a8b9c
+
+	measure 'Score Change vs 2018' = 5
+		formatString: 0
+		lineageTag: a3b4c5d6-9e0f-1a2b-3c4d-5e6f7a8b9c0d
 
 	column Column
 		formatString: 0
@@ -87,6 +90,4 @@ table 'Table Meassure'
 		source = Row("Column", BLANK())
 
 	annotation PBI_Id = 2a0b137cd70a4cb9acf8b29766acb610
-
 	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
-

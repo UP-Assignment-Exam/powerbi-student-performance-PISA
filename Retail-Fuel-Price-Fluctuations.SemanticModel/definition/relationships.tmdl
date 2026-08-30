@@ -4,3 +4,7 @@ relationship 117d2a5f-fe0b-c6b1-d30d-3816736673f6
 	fromColumn: refined_dataset.Country_Code
 	toColumn: 'OECD PISA data'.LOCATION
 
+relationship 228e3b6a-8f1c-4d0e-9a2b-5c6d7e8f9a0b
+	fromColumn: 'OECD PISA data'.LOCATION
+	toColumn: Country_Metadata.Country_Code
+

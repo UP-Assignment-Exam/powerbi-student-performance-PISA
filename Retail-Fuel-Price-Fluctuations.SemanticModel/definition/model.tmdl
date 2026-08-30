@@ -15,6 +15,7 @@ annotation PBI_ProTooling = ["DevMode"]
 ref table refined_dataset
 ref table 'OECD PISA data'
 ref table 'Table Meassure'
+ref table Country_Metadata
 
 ref cultureInfo en-US
 
