@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p1_card_science",
   "position": {
-    "x": 608.24072943793408,
+    "x": 608.2407294379341,
     "y": 72.1759033203125,
     "z": 13000,
     "height": 121.25,
@@ -116,6 +116,11 @@
                 "Literal": {
                   "Value": "'center'"
                 }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": "7.5D"
               }
             }
           }

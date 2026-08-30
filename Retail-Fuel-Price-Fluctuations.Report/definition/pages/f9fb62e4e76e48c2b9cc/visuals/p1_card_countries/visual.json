@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p1_card_countries",
   "position": {
-    "x": 829.31215800936275,
-    "y": 71.640189034598222,
+    "x": 829.3121580093627,
+    "y": 71.64018903459822,
     "z": 14000,
     "height": 121.42857142857143,
     "width": 210,
@@ -116,6 +116,11 @@
                 "Literal": {
                   "Value": "'center'"
                 }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": "7.5D"
               }
             }
           }
