@@ -117,11 +117,6 @@
                   "Value": "'center'"
                 }
               }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "7.5D"
-              }
             }
           }
         }

@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p1_card_math",
   "position": {
-    "x": 387.8835865807912,
-    "y": 71.64018903459822,
+    "x": 387.88358658079119,
+    "y": 71.640189034598222,
     "z": 12000,
     "height": 121.42857142857143,
     "width": 210,
@@ -116,11 +116,6 @@
                 "Literal": {
                   "Value": "'center'"
                 }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": "7.5D"
               }
             }
           }
