@@ -23,10 +23,10 @@
                       "Entity": "Table Meassure"
                     }
                   },
-                  "Property": "Score Change vs 2018"
+                  "Property": "Score Change vs Previous Year"
                 }
               },
-              "queryRef": "Table Meassure.Score Change vs 2018",
+              "queryRef": "Table Meassure.Score Change vs Previous Year",
               "nativeQueryRef": "Score Change"
             }
           ]
@@ -93,7 +93,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Change vs 2018'"
+                  "Value": "'Score Change'"
                 }
               }
             },
@@ -117,51 +117,6 @@
                   "expr": {
                     "Literal": {
                       "Value": "'#0B1E48'"
-                    }
-                  }
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "subTitle": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'points'"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Segoe UI'"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#16A34A'"
                     }
                   }
                 }

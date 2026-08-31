@@ -25,7 +25,7 @@ This simple guide explains **what each number and chart means** in your Power BI
 | **🧪 Science Score (`490`)** | Global average score in scientific knowledge | **Why**: Shows students' grasp of scientific facts and inquiry (currently the highest average among the three). |
 | **🌐 Economies (`47` to `81`)** | Total count of countries & territories included | **Why**: Gives geographic context so people know how many countries participated. |
 | **👥 Students (`1M`)** | Total sample of 15-year-old students tested | **Why**: Proves credibility and statistical power — it represents over 30 million students globally. |
-| **▲ vs 2018 Comparison (`▲ 5`, `▲ 7`, `▲ 6`)** | Score change compared to the previous assessment | **Why**: A standalone number doesn't tell a story. The delta shows whether global performance is going up or down. |
+| **▲ Comparison vs Previous Year** | Dynamic delta comparing selected assessment cycle to prior cycle (e.g. `vs 2015 ▲ 6 pts`, empty when no year is selected) | **Why**: A standalone number doesn't tell a story. The delta dynamically shows whether global performance improved or declined compared to the prior test cycle. |
 
 ---
 
@@ -65,7 +65,7 @@ This simple guide explains **what each number and chart means** in your Power BI
 | **Highest Score** | **Singapore (575)** | **Why**: Sets the global gold standard. Singapore is 75 points above the OECD average. |
 | **Lowest Score** | **Guatemala (334)** | **Why**: Identifies the lower boundary to highlight which systems need urgent intervention. |
 | **Score Gap / Disparity** | **241 points** | **Why**: **The most impactful number in the report**. A 241-point gap equals **~6 full years of schooling difference** between students of the same age! |
-| **Change vs 2018** | **▲ 5 points** | **Why**: Measures the net shift across all filtered countries compared to 2018. |
+| **Score Change** | **Dynamic vs Prior Year** | **Why**: Measures the net shift across all filtered countries compared to the previous assessment cycle. |
 
 ---
 

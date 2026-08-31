@@ -72,9 +72,241 @@ table 'Table Meassure'
 		formatString: 0
 		lineageTag: f2a3b4c5-8d9e-0f1a-2b3c-4d5e6f7a8b9c
 
-	measure 'Score Change vs 2018' = 5
+	measure 'Score Change vs 2018' = [Score Change vs Previous Year]
+		formatString: 0
+		lineageTag: a3b4c5d6-9e0f-1a2b-3c4d-5e6f7a8b9c0e
+
+	measure 'Score Change vs Previous Year' =
+			VAR SelectedYear =
+			    COALESCE(
+			        SELECTEDVALUE('OECD PISA data'[Assessment Year]),
+			        SELECTEDVALUE('OECD PISA data'[TIME])
+			    )
+			VAR PrevYear =
+			    CALCULATE(
+			        MAX('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[Assessment Year]),
+			        'OECD PISA data'[TIME] < SelectedYear,
+			        'OECD PISA data'[Value] > 0
+			    )
+			VAR CurrentScore = [Selected Subject Score]
+			VAR PrevScore =
+			    CALCULATE(
+			        [Selected Subject Score],
+			        REMOVEFILTERS('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[Assessment Year]),
+			        'OECD PISA data'[TIME] = PrevYear,
+			        'OECD PISA data'[Assessment Year] = PrevYear
+			    )
+			RETURN
+			    IF(
+			        ISBLANK(SelectedYear) || ISBLANK(PrevYear) || ISBLANK(CurrentScore) || ISBLANK(PrevScore) || CurrentScore <= 0 || PrevScore <= 0,
+			        BLANK(),
+			        ROUND(CurrentScore - PrevScore, 0)
+			    )
 		formatString: 0
 		lineageTag: a3b4c5d6-9e0f-1a2b-3c4d-5e6f7a8b9c0d
+
+	measure 'Reading Score Subtitle' =
+			VAR SelectedYear =
+			    COALESCE(
+			        SELECTEDVALUE('OECD PISA data'[Assessment Year]),
+			        SELECTEDVALUE('OECD PISA data'[TIME])
+			    )
+			VAR PrevYear =
+			    CALCULATE(
+			        MAX('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[Assessment Year]),
+			        'OECD PISA data'[TIME] < SelectedYear,
+			        'OECD PISA data'[Value] > 0
+			    )
+			VAR CurrentScore = [Average Reading Score]
+			VAR PrevScore =
+			    CALCULATE(
+			        [Average Reading Score],
+			        REMOVEFILTERS('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[Assessment Year]),
+			        'OECD PISA data'[TIME] = PrevYear,
+			        'OECD PISA data'[Assessment Year] = PrevYear
+			    )
+			VAR Diff = CurrentScore - PrevScore
+			RETURN
+			    IF(
+			        ISBLANK(SelectedYear) || ISBLANK(PrevYear) || ISBLANK(CurrentScore) || ISBLANK(PrevScore) || CurrentScore <= 0 || PrevScore <= 0,
+			        BLANK(),
+			        "vs " & PrevYear & "  " &
+			        IF(ROUND(Diff, 0) > 0, "▲ " & FORMAT(ROUND(Diff, 0), "0") & " pts",
+			        IF(ROUND(Diff, 0) < 0, "▼ " & FORMAT(ABS(ROUND(Diff, 0)), "0") & " pts",
+			        "— 0 pts"
+			        ))
+			    )
+		lineageTag: a1f2c3d4-e5b6-7a8b-9c0d-1e2f3a4b5c01
+
+	measure 'Math Score Subtitle' =
+			VAR SelectedYear =
+			    COALESCE(
+			        SELECTEDVALUE('OECD PISA data'[Assessment Year]),
+			        SELECTEDVALUE('OECD PISA data'[TIME])
+			    )
+			VAR PrevYear =
+			    CALCULATE(
+			        MAX('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[Assessment Year]),
+			        'OECD PISA data'[TIME] < SelectedYear,
+			        'OECD PISA data'[Value] > 0
+			    )
+			VAR CurrentScore = [Average Math Score]
+			VAR PrevScore =
+			    CALCULATE(
+			        [Average Math Score],
+			        REMOVEFILTERS('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[Assessment Year]),
+			        'OECD PISA data'[TIME] = PrevYear,
+			        'OECD PISA data'[Assessment Year] = PrevYear
+			    )
+			VAR Diff = CurrentScore - PrevScore
+			RETURN
+			    IF(
+			        ISBLANK(SelectedYear) || ISBLANK(PrevYear) || ISBLANK(CurrentScore) || ISBLANK(PrevScore) || CurrentScore <= 0 || PrevScore <= 0,
+			        BLANK(),
+			        "vs " & PrevYear & "  " &
+			        IF(ROUND(Diff, 0) > 0, "▲ " & FORMAT(ROUND(Diff, 0), "0") & " pts",
+			        IF(ROUND(Diff, 0) < 0, "▼ " & FORMAT(ABS(ROUND(Diff, 0)), "0") & " pts",
+			        "— 0 pts"
+			        ))
+			    )
+		lineageTag: b2f3c4d5-e6a7-8b9c-0d1e-2f3a4b5c6d02
+
+	measure 'Science Score Subtitle' =
+			VAR SelectedYear =
+			    COALESCE(
+			        SELECTEDVALUE('OECD PISA data'[Assessment Year]),
+			        SELECTEDVALUE('OECD PISA data'[TIME])
+			    )
+			VAR PrevYear =
+			    CALCULATE(
+			        MAX('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[Assessment Year]),
+			        'OECD PISA data'[TIME] < SelectedYear,
+			        'OECD PISA data'[Value] > 0
+			    )
+			VAR CurrentScore = [Average Science Score]
+			VAR PrevScore =
+			    CALCULATE(
+			        [Average Science Score],
+			        REMOVEFILTERS('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[Assessment Year]),
+			        'OECD PISA data'[TIME] = PrevYear,
+			        'OECD PISA data'[Assessment Year] = PrevYear
+			    )
+			VAR Diff = CurrentScore - PrevScore
+			RETURN
+			    IF(
+			        ISBLANK(SelectedYear) || ISBLANK(PrevYear) || ISBLANK(CurrentScore) || ISBLANK(PrevScore) || CurrentScore <= 0 || PrevScore <= 0,
+			        BLANK(),
+			        "vs " & PrevYear & "  " &
+			        IF(ROUND(Diff, 0) > 0, "▲ " & FORMAT(ROUND(Diff, 0), "0") & " pts",
+			        IF(ROUND(Diff, 0) < 0, "▼ " & FORMAT(ABS(ROUND(Diff, 0)), "0") & " pts",
+			        "— 0 pts"
+			        ))
+			    )
+		lineageTag: c3f4c5d6-e7a8-9b0c-1d2e-3f4a5b6c7d03
+
+	measure 'Economies Subtitle' =
+			VAR SelectedYear =
+			    COALESCE(
+			        SELECTEDVALUE('OECD PISA data'[Assessment Year]),
+			        SELECTEDVALUE('OECD PISA data'[TIME])
+			    )
+			VAR PrevYear =
+			    CALCULATE(
+			        MAX('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[Assessment Year]),
+			        'OECD PISA data'[TIME] < SelectedYear
+			    )
+			VAR CurrentCount = [Participating Countries Count]
+			VAR PrevCount =
+			    CALCULATE(
+			        [Participating Countries Count],
+			        REMOVEFILTERS('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[Assessment Year]),
+			        'OECD PISA data'[TIME] = PrevYear,
+			        'OECD PISA data'[Assessment Year] = PrevYear
+			    )
+			VAR Diff = CurrentCount - PrevCount
+			RETURN
+			    IF(
+			        ISBLANK(SelectedYear) || ISBLANK(PrevYear) || ISBLANK(CurrentCount) || ISBLANK(PrevCount),
+			        BLANK(),
+			        "vs " & PrevYear & "  " &
+			        IF(Diff > 0, "▲ +" & FORMAT(Diff, "#,0"),
+			        IF(Diff < 0, "▼ -" & FORMAT(ABS(Diff), "#,0"),
+			        "— stable"
+			        ))
+			    )
+		lineageTag: d4f5c6d7-e8a9-0b1c-2d3e-4f5a6b7c8d04
+
+	measure 'Students Subtitle' =
+			VAR SelectedYear =
+			    COALESCE(
+			        SELECTEDVALUE('OECD PISA data'[Assessment Year]),
+			        SELECTEDVALUE('OECD PISA data'[TIME])
+			    )
+			VAR PrevYear =
+			    CALCULATE(
+			        MAX('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[Assessment Year]),
+			        'OECD PISA data'[TIME] < SelectedYear
+			    )
+			VAR CurrentStudents = [Students Assessed]
+			VAR PrevStudents =
+			    CALCULATE(
+			        [Students Assessed],
+			        REMOVEFILTERS('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[Assessment Year]),
+			        'OECD PISA data'[TIME] = PrevYear,
+			        'OECD PISA data'[Assessment Year] = PrevYear
+			    )
+			VAR DiffPct = DIVIDE(CurrentStudents - PrevStudents, PrevStudents)
+			RETURN
+			    IF(
+			        ISBLANK(SelectedYear) || ISBLANK(PrevYear) || ISBLANK(CurrentStudents) || ISBLANK(PrevStudents),
+			        BLANK(),
+			        "vs " & PrevYear & "  " &
+			        IF(DiffPct > 0, "▲ +" & FORMAT(DiffPct, "0%"),
+			        IF(DiffPct < 0, "▼ -" & FORMAT(ABS(DiffPct), "0%"),
+			        "— stable"
+			        ))
+			    )
+		lineageTag: e5f6c7d8-e9a0-1b2c-3d4e-5f6a7b8c9d05
+
+	measure 'Score Change Subtitle' =
+			VAR SelectedYear =
+			    COALESCE(
+			        SELECTEDVALUE('OECD PISA data'[Assessment Year]),
+			        SELECTEDVALUE('OECD PISA data'[TIME])
+			    )
+			VAR PrevYear =
+			    CALCULATE(
+			        MAX('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[TIME]),
+			        REMOVEFILTERS('OECD PISA data'[Assessment Year]),
+			        'OECD PISA data'[TIME] < SelectedYear,
+			        'OECD PISA data'[Value] > 0
+			    )
+			RETURN
+			    IF(
+			        ISBLANK(SelectedYear) || ISBLANK(PrevYear),
+			        BLANK(),
+			        "vs " & PrevYear & " (points)"
+			    )
+		lineageTag: f6a7b8c9-d0e1-2f3a-4b5c-6d7e8f9a0b06
 
 	column Column
 		formatString: 0
