@@ -93,7 +93,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Score Change (vs 2018)'"
+                  "Value": "'Change vs 2018'"
                 }
               }
             },

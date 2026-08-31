@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p1_line_subjects",
   "position": {
     "x": 0,
@@ -116,12 +116,28 @@
       ],
       "valueAxis": [
         {
-          "properties": {}
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "categoryAxis": [
         {
-          "properties": {}
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -139,7 +155,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Longitudinal Score Trends by Subject (2000–2022)'"
+                  "Value": "'Score Trends by Subject'"
                 }
               }
             },
@@ -243,5 +259,65 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "53affe2de945ecbe186b"
+  "parentGroupName": "53affe2de945ecbe186b",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "fc4edb5a1f5585495797",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "OECD PISA data"
+              }
+            },
+            "Property": "TIME"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e84652594eaededa1df7",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Table Meassure"
+              }
+            },
+            "Property": "Average Reading Score"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a3936a3b1c4879cfbed7",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Table Meassure"
+              }
+            },
+            "Property": "Average Math Score"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4d81623a18430173a3ff",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Table Meassure"
+              }
+            },
+            "Property": "Average Science Score"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p1_donut_region",
   "position": {
     "x": 550,
@@ -101,7 +101,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Assessed Student Population by Region'"
+                  "Value": "'Students by Region'"
                 }
               }
             },
@@ -198,5 +198,37 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "4dacb652eef0aa60d897"
+  "parentGroupName": "4dacb652eef0aa60d897",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "fe543faf23a60b692daf",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Country_Metadata"
+              }
+            },
+            "Property": "Region"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7c81a4ec709491a4cd0d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Table Meassure"
+              }
+            },
+            "Property": "Students Assessed"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

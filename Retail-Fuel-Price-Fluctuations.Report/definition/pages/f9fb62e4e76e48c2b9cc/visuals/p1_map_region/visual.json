@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p1_map_region",
   "position": {
     "x": 0,
@@ -118,6 +118,32 @@
             }
           }
         }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -134,7 +160,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Average Score Benchmark by Global Region'"
+                  "Value": "'Average Score by Region'"
                 }
               }
             },
@@ -231,5 +257,37 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "4dacb652eef0aa60d897"
+  "parentGroupName": "4dacb652eef0aa60d897",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "187195c36e4b16033044",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Country_Metadata"
+              }
+            },
+            "Property": "Region"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "077474fce9e8a49763fc",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Table Meassure"
+              }
+            },
+            "Property": "Overall PISA Score"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

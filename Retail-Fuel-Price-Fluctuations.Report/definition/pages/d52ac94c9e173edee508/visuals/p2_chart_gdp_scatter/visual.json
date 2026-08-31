@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p2_chart_gdp_scatter",
   "position": {
     "x": 716.66666666666674,
@@ -85,12 +85,28 @@
       ],
       "valueAxis": [
         {
-          "properties": {}
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "categoryAxis": [
         {
-          "properties": {}
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -108,7 +124,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'PISA Score vs. Wealth Level (Correlation: r = 0.62)'"
+                  "Value": "'Score vs. Wealth Level'"
                 }
               }
             },
@@ -204,5 +220,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3180f6fd32bf9f4cef6a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Country_Metadata"
+              }
+            },
+            "Property": "Income Group"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7e26557a4a32fb7cce88",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Table Meassure"
+              }
+            },
+            "Property": "Overall PISA Score"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

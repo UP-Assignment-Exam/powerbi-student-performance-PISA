@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p2_chart_income",
   "position": {
     "x": 166.66666666666669,
@@ -96,12 +96,28 @@
       ],
       "valueAxis": [
         {
-          "properties": {}
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "categoryAxis": [
         {
-          "properties": {}
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "legend": [
@@ -139,7 +155,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Performance by World Bank Income Classification'"
+                  "Value": "'Performance by Income Group'"
                 }
               }
             },
@@ -235,5 +251,65 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "de3e876bb2c9021834d3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Country_Metadata"
+              }
+            },
+            "Property": "Income Group"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "cf63d67c861cf3ba1187",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Table Meassure"
+              }
+            },
+            "Property": "Average Reading Score"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a1121adeefb38a54603c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Table Meassure"
+              }
+            },
+            "Property": "Average Math Score"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c13703a304c21e8e559b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Table Meassure"
+              }
+            },
+            "Property": "Average Science Score"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

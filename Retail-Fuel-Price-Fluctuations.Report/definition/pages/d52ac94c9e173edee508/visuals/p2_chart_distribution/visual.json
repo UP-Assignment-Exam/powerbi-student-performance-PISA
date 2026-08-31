@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p2_chart_distribution",
   "position": {
     "x": 166.66666666666669,
@@ -72,12 +72,28 @@
       ],
       "valueAxis": [
         {
-          "properties": {}
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "categoryAxis": [
         {
-          "properties": {}
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -95,7 +111,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Global Score Distribution (Frequency of Economies)'"
+                  "Value": "'Score Distribution'"
                 }
               }
             },
@@ -191,5 +207,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "075a5a7355192eb8c079",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "OECD PISA data"
+              }
+            },
+            "Property": "Score Bin"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "db4500d5d5fdef25784b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Table Meassure"
+              }
+            },
+            "Property": "Participating Countries Count"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

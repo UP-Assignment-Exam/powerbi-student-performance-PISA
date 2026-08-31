@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "p2_chart_top5",
   "position": {
     "x": 716.66666666666674,
@@ -85,12 +85,28 @@
       ],
       "valueAxis": [
         {
-          "properties": {}
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "categoryAxis": [
         {
-          "properties": {}
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -108,7 +124,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top 5 Performing Economies in Selected Subject'"
+                  "Value": "'Top 5 Economies'"
                 }
               }
             },
@@ -204,5 +220,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1a7c4cacf407107c39d5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "OECD PISA data"
+              }
+            },
+            "Property": "Country Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f6548471cb11de7bf053",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Table Meassure"
+              }
+            },
+            "Property": "Selected Subject Score"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

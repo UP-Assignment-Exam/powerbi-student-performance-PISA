@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "5ef0cc66c07c66e8ae15",
   "position": {
     "x": 550,
@@ -85,12 +85,28 @@
       ],
       "valueAxis": [
         {
-          "properties": {}
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "categoryAxis": [
         {
-          "properties": {}
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -108,7 +124,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top 10 Performing Countries by Overall Score'"
+                  "Value": "'Top 10 Countries by Score'"
                 }
               }
             },
@@ -205,5 +221,37 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "53affe2de945ecbe186b"
+  "parentGroupName": "53affe2de945ecbe186b",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f31aba91c558db5cd344",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "OECD PISA data"
+              }
+            },
+            "Property": "Country Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "12766d25fc0f3cd54865",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Table Meassure"
+              }
+            },
+            "Property": "Overall PISA Score"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

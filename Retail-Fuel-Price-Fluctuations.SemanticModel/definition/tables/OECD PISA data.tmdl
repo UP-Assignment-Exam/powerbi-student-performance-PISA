@@ -106,7 +106,7 @@ table 'OECD PISA data'
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("E:\powerbi-student-performance-PISA\datasets\OECD PISA data.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\Damon\Documents\School\PowerBI\Research with AI\datasets\OECD PISA data.csv"),[Delimiter=",", Columns=6, Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"index", Int64.Type}, {"LOCATION", type text}, {"INDICATOR", type text}, {"SUBJECT", type text}, {"TIME", Int64.Type}, {"Value", type number}}),
 				    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each ([SUBJECT] = "TOT")),
@@ -114,7 +114,7 @@ table 'OECD PISA data'
 				in
 				    #"Uppercased Text"
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Exception
 
 	annotation PBI_NavigationStepName = Navigation
 

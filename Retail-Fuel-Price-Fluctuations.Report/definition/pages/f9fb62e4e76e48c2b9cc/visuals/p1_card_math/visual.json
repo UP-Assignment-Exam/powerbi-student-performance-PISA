@@ -93,7 +93,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'🧮 Average Math Score'"
+                  "Value": "'🧮 Math Score'"
                 }
               }
             },
