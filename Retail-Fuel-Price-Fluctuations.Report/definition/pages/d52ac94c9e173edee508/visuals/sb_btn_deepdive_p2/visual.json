@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "sb_btn_deepdive_p2",
   "position": {
-    "x": 8,
-    "y": 122,
-    "z": 4000,
+    "x": 2.8571428571428572,
+    "y": 184.28571428571431,
+    "z": 5000,
     "height": 40,
-    "width": 142,
+    "width": 141.42857142857144,
     "tabOrder": 5000
   },
   "visual": {

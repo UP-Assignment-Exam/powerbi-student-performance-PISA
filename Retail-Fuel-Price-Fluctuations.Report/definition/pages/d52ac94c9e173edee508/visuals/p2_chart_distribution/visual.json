@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "p2_chart_distribution",
   "position": {
-    "x": 166.33328247070313,
-    "y": 174.33335876464844,
+    "x": 166.66666666666669,
+    "y": 186.66666666666669,
     "z": 16000,
     "height": 250,
     "width": 535,
-    "tabOrder": 16000
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "columnChart",
