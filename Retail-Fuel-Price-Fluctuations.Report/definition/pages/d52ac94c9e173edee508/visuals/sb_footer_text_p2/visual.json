@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "sb_footer_text_p2",
   "position": {
-    "x": 8,
-    "y": 590,
-    "z": 6000,
+    "x": 7.5,
+    "y": 545,
+    "z": 7000,
     "height": 110,
-    "width": 134,
+    "width": 135,
     "tabOrder": 6000
   },
   "visual": {
@@ -19,7 +19,50 @@
               {
                 "textRuns": [
                   {
-                    "value": "Programme for\nInternational\nStudent Assessment\n\n© 2024 PISA Analysis",
+                    "value": "Programme for",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "7.5pt",
+                      "color": "#9ea4ba"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "International",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "7.5pt",
+                      "color": "#9ea4ba"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Student Assessment",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "7.5pt",
+                      "color": "#9ea4ba"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "© 2024 PISA Analysis",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "7.5pt",

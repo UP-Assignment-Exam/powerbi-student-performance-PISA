@@ -8,7 +8,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["refined_dataset","OECD PISA data"]
+annotation PBI_QueryOrder = ["refined_dataset","OECD PISA data","Country_Metadata"]
 
 annotation PBI_ProTooling = ["DevMode"]
 

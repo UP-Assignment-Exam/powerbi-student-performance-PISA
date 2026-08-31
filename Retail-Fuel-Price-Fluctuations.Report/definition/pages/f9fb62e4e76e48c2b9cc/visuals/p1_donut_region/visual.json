@@ -1,9 +1,9 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "p1_donut_region",
   "position": {
-    "x": 718.95236642020086,
-    "y": 460.57142857142884,
+    "x": 550,
+    "y": 0,
     "z": 19000,
     "height": 248,
     "width": 542,
@@ -197,5 +197,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "4dacb652eef0aa60d897"
 }

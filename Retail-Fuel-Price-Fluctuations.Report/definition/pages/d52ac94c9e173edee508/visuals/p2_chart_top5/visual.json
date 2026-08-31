@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "p2_chart_top5",
   "position": {
-    "x": 716.33328247070313,
-    "y": 438.33335876464844,
+    "x": 716.66666666666674,
+    "y": 446.66666666666669,
     "z": 19000,
-    "height": 258,
-    "width": 542,
-    "tabOrder": 19000
+    "height": 258.33333333333337,
+    "width": 541.66666666666674,
+    "tabOrder": 18000
   },
   "visual": {
     "visualType": "clusteredBarChart",

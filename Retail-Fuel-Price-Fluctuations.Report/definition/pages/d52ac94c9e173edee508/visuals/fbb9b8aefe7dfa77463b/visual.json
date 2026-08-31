@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "48a56ab0795b9ce7453d",
+  "name": "fbb9b8aefe7dfa77463b",
   "position": {
-    "x": 0,
-    "y": 0,
-    "z": 1000,
-    "height": 720,
-    "width": 150,
-    "tabOrder": 0
+    "x": 166.66666666666669,
+    "y": 83.333333333333343,
+    "z": 0,
+    "height": 93.333333333333343,
+    "width": 1088.3333333333335,
+    "tabOrder": 19000
   },
   "visual": {
     "visualType": "shape",
@@ -18,7 +18,7 @@
             "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "'rectangle'"
+                  "Value": "'rectangleRounded'"
                 }
               }
             }
@@ -41,32 +41,15 @@
       "fill": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        },
-        {
-          "properties": {
             "fillColor": {
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#021d4a'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
                 }
               }
             }
@@ -82,14 +65,34 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
+          }
+        },
+        {
+          "properties": {
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "howCreated": "InsertVisualButton"
 }

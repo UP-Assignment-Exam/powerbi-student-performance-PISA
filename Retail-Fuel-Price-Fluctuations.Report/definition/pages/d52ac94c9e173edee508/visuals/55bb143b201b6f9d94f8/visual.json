@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "48a56ab0795b9ce7453d",
+  "name": "55bb143b201b6f9d94f8",
   "position": {
-    "x": 0,
-    "y": 0,
-    "z": 1000,
-    "height": 720,
-    "width": 150,
-    "tabOrder": 0
+    "x": 904,
+    "y": 98,
+    "z": 23000,
+    "height": 68,
+    "width": 124,
+    "tabOrder": 23000
   },
   "visual": {
     "visualType": "shape",
@@ -18,7 +18,14 @@
             "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "'rectangle'"
+                  "Value": "'line'"
+                }
+              }
+            },
+            "linecapType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'flat'"
                 }
               }
             }
@@ -34,6 +41,13 @@
                   "Value": "0L"
                 }
               }
+            },
+            "angle": {
+              "expr": {
+                "Literal": {
+                  "Value": "90D"
+                }
+              }
             }
           }
         }
@@ -41,32 +55,22 @@
       "fill": [
         {
           "properties": {
-            "show": {
+            "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "26D"
                 }
               }
-            }
-          }
-        },
-        {
-          "properties": {
+            },
             "fillColor": {
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#021d4a'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
                     }
                   }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
                 }
               }
             }
@@ -79,17 +83,26 @@
       "outline": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
                 }
               }
             }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "howCreated": "InsertVisualButton"
 }

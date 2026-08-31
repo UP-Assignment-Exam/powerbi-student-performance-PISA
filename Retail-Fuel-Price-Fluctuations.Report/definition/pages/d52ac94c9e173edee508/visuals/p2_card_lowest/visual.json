@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "p2_card_lowest",
   "position": {
-    "x": 444.28571428571433,
-    "y": 68.571428571428569,
+    "x": 426,
+    "y": 86,
     "z": 13000,
-    "height": 92.857142857142861,
-    "width": 267.14285714285717,
-    "tabOrder": 13000
+    "height": 92,
+    "width": 266,
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "card",

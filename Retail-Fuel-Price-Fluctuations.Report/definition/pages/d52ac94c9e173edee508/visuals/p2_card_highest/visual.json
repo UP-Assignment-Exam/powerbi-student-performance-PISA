@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "p2_card_highest",
   "position": {
-    "x": 171.42857142857144,
-    "y": 68.571428571428569,
+    "x": 168,
+    "y": 86,
     "z": 12000,
-    "height": 92.857142857142861,
-    "width": 268.57142857142861,
-    "tabOrder": 12000
+    "height": 92,
+    "width": 246,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "card",
@@ -185,6 +185,19 @@
         }
       ],
       "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
         {
           "properties": {
             "show": {
