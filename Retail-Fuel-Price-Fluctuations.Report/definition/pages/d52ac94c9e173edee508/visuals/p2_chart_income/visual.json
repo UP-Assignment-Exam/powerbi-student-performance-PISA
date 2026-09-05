@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "p2_chart_income",
   "position": {
-    "x": 166.66666666666669,
-    "y": 448.33333333333337,
-    "z": 18000,
-    "height": 258.33333333333337,
-    "width": 535,
-    "tabOrder": 17000
+    "x": 166.29921259842519,
+    "y": 430.0262467191601,
+    "z": 17000,
+    "height": 280.52493438320209,
+    "width": 537.53280839895012,
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -46,7 +46,8 @@
                 }
               },
               "queryRef": "Table Meassure.Average Reading Score",
-              "nativeQueryRef": "Reading"
+              "nativeQueryRef": "Reading          ",
+              "displayName": "Reading          "
             },
             {
               "field": {
@@ -60,7 +61,8 @@
                 }
               },
               "queryRef": "Table Meassure.Average Math Score",
-              "nativeQueryRef": "Mathematics"
+              "nativeQueryRef": "Mathematic          ",
+              "displayName": "Mathematic          "
             },
             {
               "field": {
@@ -74,7 +76,8 @@
                 }
               },
               "queryRef": "Table Meassure.Average Science Score",
-              "nativeQueryRef": "Science"
+              "nativeQueryRef": "Science          ",
+              "displayName": "Science          "
             }
           ]
         }
@@ -98,6 +101,13 @@
         {
           "properties": {
             "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridlineShow": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -137,6 +147,69 @@
                 }
               }
             }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#4757D3'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Table Meassure.Average Reading Score"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#79F279'"
+                    }
+                  }
+                }
+              }
+            },
+            "fillTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Table Meassure.Average Math Score"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#8D0FA0'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Table Meassure.Average Science Score"
           }
         }
       ]
@@ -251,65 +324,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "de3e876bb2c9021834d3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Country_Metadata"
-              }
-            },
-            "Property": "Income Group"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "cf63d67c861cf3ba1187",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Table Meassure"
-              }
-            },
-            "Property": "Average Reading Score"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a1121adeefb38a54603c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Table Meassure"
-              }
-            },
-            "Property": "Average Math Score"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c13703a304c21e8e559b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Table Meassure"
-              }
-            },
-            "Property": "Average Science Score"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

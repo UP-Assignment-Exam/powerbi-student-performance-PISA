@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "fbb9b8aefe7dfa77463b",
   "position": {
-    "x": 166.66666666666669,
-    "y": 83.333333333333343,
+    "x": 168,
+    "y": 70,
     "z": 0,
-    "height": 93.333333333333343,
-    "width": 1088.3333333333335,
-    "tabOrder": 19000
+    "height": 108,
+    "width": 1090,
+    "tabOrder": 18000
   },
   "visual": {
     "visualType": "shape",
@@ -19,6 +19,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'rectangleRounded'"
+                }
+              }
+            },
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "15L"
                 }
               }
             }
