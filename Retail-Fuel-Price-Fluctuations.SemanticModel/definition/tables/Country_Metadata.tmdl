@@ -55,13 +55,14 @@ table Country_Metadata
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\Damon\Documents\School\PowerBI\Research with AI\datasets\Country_Metadata.csv"),[Delimiter=",", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("E:\powerbi-student-performance-PISA\datasets\Country_Metadata.csv"),[Delimiter=",", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Country_Code", type text}, {"Country_Name", type text}, {"Region", type text}, {"Income_Group", type text}, {"GDP_Per_Capita", type number}, {"Students_Assessed", Int64.Type}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Country_Code", type text}, {"Country_Name", type text}, {"Region", type text}, {"Income_Group", type text}, {"GDP_Per_Capita", type number}, {"Students_Assessed", Int64.Type}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type", each ([Region] <> "Global"))
 				in
-				    #"Changed Type"
+				    #"Filtered Rows"
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 
 	annotation PBI_NavigationStepName = Navigation
 

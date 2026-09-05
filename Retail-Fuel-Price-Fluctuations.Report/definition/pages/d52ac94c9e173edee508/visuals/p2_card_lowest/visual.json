@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "p2_card_lowest",
   "position": {
-    "x": 426,
-    "y": 86,
-    "z": 13000,
-    "height": 92,
-    "width": 266,
-    "tabOrder": 12000
+    "x": 420.95238095238085,
+    "y": 79.523809523809561,
+    "z": 12000,
+    "height": 92.857142857142861,
+    "width": 265.71428571428572,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +23,11 @@
                       "Entity": "Table Meassure"
                     }
                   },
-                  "Property": "Lowest Score"
+                  "Property": "Lowest Overall Score"
                 }
               },
               "queryRef": "Table Meassure.Lowest Score",
-              "nativeQueryRef": "Lowest Score"
+              "nativeQueryRef": "Lowest Overall Score"
             }
           ]
         }
@@ -59,6 +59,20 @@
                       "Value": "'#DC2626'"
                     }
                   }
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
                 }
               }
             }
@@ -138,7 +152,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -191,6 +205,19 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }

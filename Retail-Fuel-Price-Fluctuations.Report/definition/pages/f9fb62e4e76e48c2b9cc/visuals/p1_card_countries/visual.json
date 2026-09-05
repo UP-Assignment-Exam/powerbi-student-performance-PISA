@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "p1_card_countries",
   "position": {
-    "x": 830.71096753317215,
-    "y": 71.640189034598222,
-    "z": 14000,
-    "height": 121.42857142857143,
-    "width": 210,
+    "x": 919.5,
+    "y": 141,
+    "z": 33000,
+    "height": 60,
+    "width": 90,
     "tabOrder": 14000
   },
   "visual": {
@@ -86,7 +86,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -146,7 +146,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -177,7 +177,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -196,6 +196,19 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "p2_chart_distribution",
   "position": {
-    "x": 166.66666666666669,
-    "y": 186.66666666666669,
-    "z": 16000,
-    "height": 250,
-    "width": 535,
-    "tabOrder": 15000
+    "x": 167.23048507825419,
+    "y": 185.75289199961119,
+    "z": 15000,
+    "height": 236.85039370078738,
+    "width": 535.85301837270345,
+    "tabOrder": 14000
   },
   "visual": {
     "visualType": "columnChart",
@@ -79,6 +79,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -87,6 +94,13 @@
         {
           "properties": {
             "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridlineShow": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -207,37 +221,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "075a5a7355192eb8c079",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "OECD PISA data"
-              }
-            },
-            "Property": "Score Bin"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "db4500d5d5fdef25784b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Table Meassure"
-              }
-            },
-            "Property": "Participating Countries Count"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

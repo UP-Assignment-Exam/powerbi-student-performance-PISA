@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "p2_card_change",
   "position": {
-    "x": 978,
-    "y": 86,
-    "z": 15000,
+    "x": 984,
+    "y": 80,
+    "z": 14000,
     "height": 92,
     "width": 268,
-    "tabOrder": 14000
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "card",
@@ -23,14 +23,32 @@
                       "Entity": "Table Meassure"
                     }
                   },
-                  "Property": "Score Change vs Previous Year"
+                  "Property": "Average Score Over Time"
                 }
               },
-              "queryRef": "Table Meassure.Score Change vs Previous Year",
-              "nativeQueryRef": "Score Change"
+              "queryRef": "Table Meassure.Average Score Over Time",
+              "nativeQueryRef": "Average Score Over Time"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Table Meassure"
+                  }
+                },
+                "Property": "Average Score Over Time"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -59,6 +77,13 @@
                       "Value": "'#16A34A'"
                     }
                   }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
                 }
               }
             }
@@ -93,7 +118,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Score Change'"
+                  "Value": "'Average Score Over Time'"
                 }
               }
             },
@@ -139,6 +164,58 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'points'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#16A34A'"
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }

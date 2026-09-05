@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "p1_map_region",
   "position": {
     "x": 0,
-    "y": 0,
+    "y": 2,
     "z": 18000,
-    "height": 248,
-    "width": 535,
-    "tabOrder": 18000
+    "height": 224,
+    "width": 522,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "barChart",
@@ -79,7 +79,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#3B82F6'"
+                      "Value": "'#1B64F2'"
                     }
                   }
                 }
@@ -136,6 +136,13 @@
         {
           "properties": {
             "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridlineShow": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -257,37 +264,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "4dacb652eef0aa60d897",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "187195c36e4b16033044",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Country_Metadata"
-              }
-            },
-            "Property": "Region"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "077474fce9e8a49763fc",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Table Meassure"
-              }
-            },
-            "Property": "Overall PISA Score"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "4dacb652eef0aa60d897"
 }
