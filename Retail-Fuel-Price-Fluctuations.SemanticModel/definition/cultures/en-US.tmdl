@@ -2164,6 +2164,26 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.485
 			          }
+			        },
+			        {
+			          "Mathemathic": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Mathematic": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2292,6 +2312,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.485
 			          }
+			        },
+			        {
+			          "Reading": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -2419,6 +2449,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "Science": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -2821,7 +2861,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Table Meassure",
-			          "ConceptualProperty": "Highest Score"
+			          "ConceptualProperty": "Highest Overall Score"
 			        }
 			      },
 			      "State": "Generated",
@@ -2943,7 +2983,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Table Meassure",
-			          "ConceptualProperty": "Lowest Score"
+			          "ConceptualProperty": "Lowest Overall Score"
 			        }
 			      },
 			      "State": "Generated",
@@ -3065,7 +3105,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Table Meassure",
-			          "ConceptualProperty": "Score Difference"
+			          "ConceptualProperty": "Score Gap"
 			        }
 			      },
 			      "State": "Generated",
@@ -4455,39 +4495,6 @@ cultureInfo en-US
 			    }
 			  },
 			  "Relationships": {
-			    "OECD_PISA_data_has_table_meassure_students_subtitle": {
-			      "Binding": {
-			        "ConceptualEntity": "OECD PISA data"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "OECD_PISA_data": {
-			          "Target": {
-			            "Entity": "OECD_PISA_data"
-			          }
-			        },
-			        "table_meassure.students_subtitle": {
-			          "Target": {
-			            "Entity": "table_meassure.students_subtitle"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "OECD_PISA_data"
-			            },
-			            "Object": {
-			              "Role": "table_meassure.students_subtitle"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "OECD_PISA_data_have_students_subtitle"
-			        }
-			      ]
-			    },
 			    "country_metadata_has_table_meassure_students_subtitle": {
 			      "Binding": {
 			        "ConceptualEntity": "Country_Metadata"
@@ -5271,6 +5278,26 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "OECD_PISA_data_have_average_math_score"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "OECD_PISA_data"
+			            },
+			            "Adjectives": [
+			              {
+			                "Mathematic": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "table_meassure.average_math_score"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "average_math_score_indicates_how_Mathematic_OECD_PISA_data_are"
 			        }
 			      ]
 			    },
@@ -6246,6 +6273,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "refined_datasets_are_in_countries"
+			        }
+			      ]
+			    },
+			    "OECD_PISA_data_has_table_meassure_students_subtitle": {
+			      "Binding": {
+			        "ConceptualEntity": "OECD PISA data"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "OECD_PISA_data": {
+			          "Target": {
+			            "Entity": "OECD_PISA_data"
+			          }
+			        },
+			        "table_meassure.students_subtitle": {
+			          "Target": {
+			            "Entity": "table_meassure.students_subtitle"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "OECD_PISA_data"
+			            },
+			            "Object": {
+			              "Role": "table_meassure.students_subtitle"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "OECD_PISA_data_have_students_subtitle"
 			        }
 			      ]
 			    },

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "p1_card_math",
   "position": {
-    "x": 386.8419199141245,
-    "y": 71.66995093936012,
-    "z": 12000,
-    "height": 121.66666666666667,
-    "width": 210,
+    "x": 472,
+    "y": 148,
+    "z": 22000,
+    "height": 50,
+    "width": 96,
     "tabOrder": 12000
   },
   "visual": {
@@ -86,7 +86,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -145,7 +145,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -176,7 +176,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -195,6 +195,19 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

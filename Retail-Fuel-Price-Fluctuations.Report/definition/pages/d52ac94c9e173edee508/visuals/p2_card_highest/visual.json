@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "p2_card_highest",
   "position": {
-    "x": 168,
-    "y": 86,
-    "z": 12000,
-    "height": 92,
-    "width": 246,
-    "tabOrder": 11000
+    "x": 176.66666666666669,
+    "y": 78.333333333333343,
+    "z": 11000,
+    "height": 93.333333333333343,
+    "width": 246.66666666666669,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +23,11 @@
                       "Entity": "Table Meassure"
                     }
                   },
-                  "Property": "Highest Score"
+                  "Property": "Highest Overall Score"
                 }
               },
               "queryRef": "Table Meassure.Highest Score",
-              "nativeQueryRef": "Highest Score"
+              "nativeQueryRef": "Highest Overall Score"
             }
           ]
         }
@@ -61,6 +61,20 @@
                   }
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "preserveWhitespace": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -72,6 +86,19 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "wordWrap": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -128,6 +155,13 @@
                   "Value": "'center'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
             }
           }
         }
@@ -138,7 +172,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -201,6 +235,26 @@
         {
           "properties": {
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "customizeSpacing": {
               "expr": {
                 "Literal": {
                   "Value": "false"

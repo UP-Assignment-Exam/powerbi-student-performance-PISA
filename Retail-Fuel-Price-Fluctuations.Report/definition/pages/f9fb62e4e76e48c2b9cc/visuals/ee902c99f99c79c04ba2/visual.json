@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "ee902c99f99c79c04ba2",
   "position": {
-    "x": 905,
-    "y": 8,
+    "x": 830,
+    "y": 2,
     "z": 9000,
-    "height": 54,
-    "width": 185,
-    "tabOrder": 9000
+    "height": 70,
+    "width": 222,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "slicer",
@@ -71,9 +71,16 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#64748B'"
+                      "Value": "'#252423'"
                     }
                   }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -82,63 +89,7 @@
       ],
       "general": [
         {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "o",
-                    "Entity": "OECD PISA data",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "o"
-                                }
-                              },
-                              "Property": "Country / Economy"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Italy'"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Japan'"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Israel'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "selection": [
@@ -148,6 +99,35 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0e1a77'"
+                    }
+                  }
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -197,23 +177,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "6868060c16e04839b1fa",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "OECD PISA data"
-              }
-            },
-            "Property": "Country / Economy"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

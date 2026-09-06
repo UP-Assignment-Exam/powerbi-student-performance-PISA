@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "p1_line_subjects",
   "position": {
     "x": 0,
     "y": 0,
     "z": 16000,
-    "height": 244,
-    "width": 535,
-    "tabOrder": 16000
+    "height": 216,
+    "width": 526,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "lineChart",
@@ -46,7 +46,8 @@
                 }
               },
               "queryRef": "Table Meassure.Average Reading Score",
-              "nativeQueryRef": "Reading"
+              "nativeQueryRef": "Reading              ",
+              "displayName": "Reading              "
             },
             {
               "field": {
@@ -60,7 +61,8 @@
                 }
               },
               "queryRef": "Table Meassure.Average Math Score",
-              "nativeQueryRef": "Mathematics"
+              "nativeQueryRef": "Mathemathic            ",
+              "displayName": "Mathemathic            "
             },
             {
               "field": {
@@ -74,7 +76,8 @@
                 }
               },
               "queryRef": "Table Meassure.Average Science Score",
-              "nativeQueryRef": "Science"
+              "nativeQueryRef": "Science              ",
+              "displayName": "Science              "
             }
           ]
         }
@@ -90,7 +93,47 @@
                   "Value": "true"
                 }
               }
+            },
+            "leaderLines": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "leaderLineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 9,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
+          }
+        },
+        {
+          "properties": {
+            "enableTitleDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Table Meassure.Average Reading Score"
           }
         }
       ],
@@ -110,6 +153,39 @@
                   "Value": "'TopRight'"
                 }
               }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "matchLineColor": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
             }
           }
         }
@@ -118,6 +194,25 @@
         {
           "properties": {
             "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "gridlineShow": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -136,7 +231,118 @@
                   "Value": "false"
                 }
               }
+            },
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Scalar'"
+                }
+              }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
             }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Table Meassure.Average Reading Score"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#109E28'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Table Meassure.Average Math Score"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Table Meassure.Average Science Score"
+          }
+        }
+      ],
+      "lineStyles": [
+        {
+          "properties": {
+            "areaShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Table Meassure.Average Science Score"
           }
         }
       ]
@@ -155,7 +361,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Score Trends by Subject'"
+                  "Value": "'Average Score by Subject'"
                 }
               }
             },
@@ -255,6 +461,39 @@
             }
           }
         }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Reading Score, Average Math Score and Average Science Score by TIME'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -263,35 +502,8 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "fc4edb5a1f5585495797",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "OECD PISA data"
-              }
-            },
-            "Property": "TIME"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e84652594eaededa1df7",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Table Meassure"
-              }
-            },
-            "Property": "Average Reading Score"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a3936a3b1c4879cfbed7",
+        "name": "76c894e7cafabb3edad6",
+        "displayName": "Math Score",
         "field": {
           "Measure": {
             "Expression": {
@@ -300,20 +512,6 @@
               }
             },
             "Property": "Average Math Score"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4d81623a18430173a3ff",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Table Meassure"
-              }
-            },
-            "Property": "Average Science Score"
           }
         },
         "type": "Advanced"

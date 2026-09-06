@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "p1_card_reading",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "cb7454df3c1d2a28591a",
   "position": {
-    "x": 168.24072943793402,
-    "y": 72.1759033203125,
-    "z": 11000,
-    "height": 121.25,
-    "width": 210,
-    "tabOrder": 11000
+    "x": 250.28871391076115,
+    "y": 285.56430446194224,
+    "z": 2000,
+    "height": 63.832020997375324,
+    "width": 102.46719160104986,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "card",
@@ -86,7 +86,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -146,7 +146,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -177,7 +177,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -214,26 +214,21 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b1577b11888b5736497f",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Table Meassure"
-              }
-            },
-            "Property": "Average Reading Score"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

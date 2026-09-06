@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "sb_logo_icon_p2",
+  "name": "86aa1141b1598526eeb5",
   "position": {
-    "x": 17.5,
-    "y": 32.5,
-    "z": 2000,
-    "height": 50,
-    "width": 50,
-    "tabOrder": 1000
+    "x": 195.17585301837272,
+    "y": 134.00610283293884,
+    "z": 17000,
+    "height": 70.551181102362207,
+    "width": 57.112860892388447,
+    "tabOrder": 19000
   },
   "visual": {
     "visualType": "image",
@@ -20,7 +20,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'icons8-globe-50.png'"
+                      "Value": "'book (1).png'"
                     }
                   }
                 },
@@ -29,14 +29,14 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "icons8-globe-504092992886697814.png"
+                      "ItemName": "book_(1)943427212537619.png"
                     }
                   }
                 },
                 "scaling": {
                   "expr": {
                     "Literal": {
-                      "Value": "'Fit'"
+                      "Value": "'Normal'"
                     }
                   }
                 }

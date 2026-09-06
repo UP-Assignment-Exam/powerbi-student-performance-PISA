@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
   "themeCollection": {
     "baseTheme": {
       "name": "CY25SU11",
@@ -38,7 +38,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "true"
+                "Value": "false"
               }
             }
           }
@@ -75,6 +75,31 @@
         {
           "name": "view-list3545223041655594.png",
           "path": "view-list3545223041655594.png",
+          "type": "Image"
+        },
+        {
+          "name": "book_(1)943427212537619.png",
+          "path": "book_(1)943427212537619.png",
+          "type": "Image"
+        },
+        {
+          "name": "calculator_(1)7565284391573179.png",
+          "path": "calculator_(1)7565284391573179.png",
+          "type": "Image"
+        },
+        {
+          "name": "microscope7777714172457831.png",
+          "path": "microscope7777714172457831.png",
+          "type": "Image"
+        },
+        {
+          "name": "circle3163888063042294.png",
+          "path": "circle3163888063042294.png",
+          "type": "Image"
+        },
+        {
+          "name": "training9433953265720569.png",
+          "path": "training9433953265720569.png",
           "type": "Image"
         }
       ]

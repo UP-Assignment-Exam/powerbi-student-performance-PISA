@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "sb_btn_overview_p2",
   "position": {
-    "x": 4.2857142857142856,
-    "y": 117.14285714285715,
-    "z": 6000,
-    "height": 40,
-    "width": 141.42857142857144,
-    "tabOrder": 4000
+    "x": 10.078740157480315,
+    "y": 80.629921259842519,
+    "z": 5000,
+    "height": 40.314960629921259,
+    "width": 141.10236220472441,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "actionButton",

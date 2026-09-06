@@ -6,8 +6,8 @@
     "y": 0,
     "z": 7000,
     "height": 74,
-    "width": 570,
-    "tabOrder": 7000
+    "width": 498,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "textbox",
@@ -24,7 +24,7 @@
                       "fontWeight": "bold",
                       "fontFamily": "Cambria",
                       "fontSize": "15pt",
-                      "color": "#573b92"
+                      "color": "#0e1a77"
                     }
                   }
                 ]
@@ -35,8 +35,7 @@
                     "value": "An overview of student performance in Reading, Mathematics and Science across countries/regions",
                     "textStyle": {
                       "fontFamily": "Cambria",
-                      "fontSize": "12pt",
-                      "color": "#64748b"
+                      "fontSize": "11pt"
                     }
                   }
                 ]

@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "p2_slicer_subject",
   "position": {
-    "x": 905,
-    "y": 8,
-    "z": 10000,
-    "height": 54,
-    "width": 185,
-    "tabOrder": 9000
+    "x": 785.61640982923791,
+    "y": 1.8683881715951685,
+    "z": 9000,
+    "height": 68,
+    "width": 220,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -71,9 +71,16 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#64748B'"
+                      "Value": "'#0e1a77'"
                     }
                   }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -92,6 +99,35 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0e1a77'"
+                    }
+                  }
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -145,7 +181,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "efcb7696361395731e3b",
+        "name": "3bb0d7670d38cce70fa2",
         "field": {
           "Column": {
             "Expression": {

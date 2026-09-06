@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "5ef0cc66c07c66e8ae15",
   "position": {
-    "x": 550,
+    "x": 540,
     "y": 0,
     "z": 17000,
-    "height": 244,
-    "width": 542,
-    "tabOrder": 17000
+    "height": 218,
+    "width": 558,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -50,6 +50,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Table Meassure"
+                  }
+                },
+                "Property": "Overall PISA Score"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -87,6 +104,13 @@
         {
           "properties": {
             "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridlineShow": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -221,37 +245,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "53affe2de945ecbe186b",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f31aba91c558db5cd344",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "OECD PISA data"
-              }
-            },
-            "Property": "Country Name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "12766d25fc0f3cd54865",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Table Meassure"
-              }
-            },
-            "Property": "Overall PISA Score"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "53affe2de945ecbe186b"
 }

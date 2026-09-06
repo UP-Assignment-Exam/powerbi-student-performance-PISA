@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "sb_logo_text_p2",
   "position": {
-    "x": 74.285714285714292,
-    "y": 12.857142857142858,
-    "z": 3000,
-    "height": 72.857142857142861,
-    "width": 82.857142857142861,
-    "tabOrder": 2000
+    "x": 48.713910761154857,
+    "y": 13.438320209973753,
+    "z": 2000,
+    "height": 53.753280839895012,
+    "width": 100.78740157480314,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "textbox",
@@ -35,7 +35,7 @@
                     "value": "Global Analysis",
                     "textStyle": {
                       "fontFamily": "Calibri",
-                      "fontSize": "12pt",
+                      "fontSize": "8pt",
                       "color": "#ffffff"
                     }
                   }

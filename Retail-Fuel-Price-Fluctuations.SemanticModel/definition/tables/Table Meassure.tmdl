@@ -60,23 +60,75 @@ table 'Table Meassure'
 		formatString: #,0
 		lineageTag: c9d0e1f2-5a6b-7c8d-9e0f-1a2b3c4d5e6f
 
-	measure 'Highest Score' = 575
-		formatString: 0
+	measure 'Highest Overall Score' =
+			
+			VAR CountryAverages =
+			    SUMMARIZE(
+			        FILTER('OECD PISA data', 'OECD PISA data'[SUBJECT] = "TOT"),
+			        'OECD PISA data'[Country Name],
+			        "AvgScore", CALCULATE(AVERAGE('OECD PISA data'[Value]))
+			    )
+			VAR TopRow = TOPN(1, CountryAverages, [AvgScore], DESC)
+			VAR MaxCountry = MAXX(TopRow, 'OECD PISA data'[Country Name])
+			VAR MaxScore = MAXX(TopRow, [AvgScore])
+			RETURN
+			    MaxCountry & UNICHAR(10) & FORMAT(MaxScore, "0.00")
 		lineageTag: d0e1f2a3-6b7c-8d9e-0f1a-2b3c4d5e6f7a
 
-	measure 'Lowest Score' = 334
-		formatString: 0
+	measure 'Lowest Overall Score' =
+			
+			VAR CountryAverages =
+			    SUMMARIZE(
+			        FILTER('OECD PISA data', 'OECD PISA data'[SUBJECT] = "TOT"),
+			        'OECD PISA data'[Country Name],
+			        "AvgScore", CALCULATE(AVERAGE('OECD PISA data'[Value]))
+			    )
+			VAR BottomRow = TOPN(1, CountryAverages, [AvgScore], ASC)
+			VAR MinCountry = MAXX(BottomRow, 'OECD PISA data'[Country Name])
+			VAR MinScore = MAXX(BottomRow, [AvgScore])
+			RETURN
+			    MinCountry & UNICHAR(10) & FORMAT(MinScore, "0.00")
 		lineageTag: e1f2a3b4-7c8d-9e0f-1a2b-3c4d5e6f7a8b
 
-	measure 'Score Difference' = 241
-		formatString: 0
+	measure 'Score Gap' = ```
+			
+			VAR HighestScore = 
+			    CALCULATE(
+			        MAXX(
+			            SUMMARIZE(
+			                FILTER('OECD PISA data', 'OECD PISA data'[SUBJECT] = "TOT"),
+			                'OECD PISA data'[Country Name],
+			                "AvgScore", CALCULATE(AVERAGE('OECD PISA data'[Value]))
+			            ),
+			            [AvgScore]
+			        )
+			    )
+			
+			VAR LowestScore = 
+			    CALCULATE(
+			        MINX(
+			            SUMMARIZE(
+			                FILTER('OECD PISA data', 'OECD PISA data'[SUBJECT] = "TOT"),
+			                'OECD PISA data'[Country Name],
+			                "AvgScore", CALCULATE(AVERAGE('OECD PISA data'[Value]))
+			            ),
+			            [AvgScore]
+			        )
+			    )
+			
+			RETURN
+			    HighestScore - LowestScore
+			```
 		lineageTag: f2a3b4c5-8d9e-0f1a-2b3c-4d5e6f7a8b9c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Score Change vs 2018' = [Score Change vs Previous Year]
 		formatString: 0
 		lineageTag: a3b4c5d6-9e0f-1a2b-3c4d-5e6f7a8b9c0e
 
 	measure 'Score Change vs Previous Year' =
+			
 			VAR SelectedYear =
 			    COALESCE(
 			        SELECTEDVALUE('OECD PISA data'[Assessment Year]),
@@ -103,7 +155,7 @@ table 'Table Meassure'
 			    IF(
 			        ISBLANK(SelectedYear) || ISBLANK(PrevYear) || ISBLANK(CurrentScore) || ISBLANK(PrevScore) || CurrentScore <= 0 || PrevScore <= 0,
 			        BLANK(),
-			        ROUND(CurrentScore - PrevScore, 0)
+			        ROUND(CurrentScore - PrevScore, 2)
 			    )
 		formatString: 0
 		lineageTag: a3b4c5d6-9e0f-1a2b-3c4d-5e6f7a8b9c0d
@@ -307,6 +359,69 @@ table 'Table Meassure'
 			        "vs " & PrevYear & " (points)"
 			    )
 		lineageTag: f6a7b8c9-d0e1-2f3a-4b5c-6d7e8f9a0b06
+
+	measure 'Highest Score Display' = ```
+			
+			VAR MaxScore = MAX('OECD PISA data'[Value])
+			VAR MaxCountry = 
+			    CALCULATE(
+			        SELECTEDVALUE('OECD PISA data'[Country Name]),
+			        TOPN(1, 'OECD PISA data', 'OECD PISA data'[Value], DESC)
+			    )
+			RETURN
+			    MaxCountry & UNICHAR(10) & FORMAT(MaxScore, "0")
+			```
+		lineageTag: 0d934531-8c09-4f69-8dd0-837c8373aca3
+
+	measure 'Lowest Score Display' = ```
+			
+			VAR MinScore = MIN('OECD PISA data'[Value])
+			VAR MinCountry = 
+			    CALCULATE(
+			        SELECTEDVALUE('OECD PISA data'[Country Name]),
+			        TOPN(1, 'OECD PISA data', 'OECD PISA data'[Value], ASC)
+			    )
+			RETURN
+			    MinCountry & UNICHAR(10) & FORMAT(MinScore, "0")
+			```
+		lineageTag: 191bde0c-0407-4663-b55b-7efbf353194a
+
+	measure 'Score Change (Lowest)' =
+			
+			VAR YearlyMin =
+			    FILTER(
+			        SUMMARIZE(
+			            ALL('OECD PISA data'),
+			            'OECD PISA data'[TIME],
+			            "MinScore", CALCULATE(
+			                MIN('OECD PISA data'[Value]),
+			                'OECD PISA data'[SUBJECT] = "TOT"
+			            )
+			        ),
+			        NOT ISBLANK([MinScore])
+			    )
+			VAR SelectedYear = MAX('OECD PISA data'[TIME])
+			VAR PrevYear = MAXX(FILTER(YearlyMin, [TIME] < SelectedYear), [TIME])
+			VAR CurrentMin = MAXX(FILTER(YearlyMin, [TIME] = SelectedYear), [MinScore])
+			VAR PrevMin = MAXX(FILTER(YearlyMin, [TIME] = PrevYear), [MinScore])
+			VAR Change = CurrentMin - PrevMin
+			RETURN
+			    IF(
+			        ISBLANK(PrevYear) || ISBLANK(PrevMin),
+			        "No earlier year",
+			        FORMAT(Change, "+0.00;-0.00;0.00") & " points" & UNICHAR(10) & "(vs " & FORMAT(PrevYear, "0") & ")"
+			    )
+		lineageTag: 6a49a70f-3dca-428f-b68c-e7e22507949c
+
+	measure 'Average Score Over Time' =
+			
+			CALCULATE(
+			    AVERAGE('OECD PISA data'[Value]),
+			    'OECD PISA data'[SUBJECT] = "TOT"
+			)
+		lineageTag: 9505f4c8-a1d9-4a77-a090-edc61abc19b6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Column
 		formatString: 0

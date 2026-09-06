@@ -1,11 +1,11 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "p1_card_students",
   "position": {
-    "x": 1049.3121580093625,
-    "y": 71.655069986979171,
-    "z": 15000,
-    "height": 121.42857142857143,
+    "x": 170,
+    "y": 108,
+    "z": 11000,
+    "height": 122,
     "width": 210,
     "tabOrder": 15000
   },
@@ -204,23 +204,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "20a134bee50c1b1d0598",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Table Meassure"
-              }
-            },
-            "Property": "Students Assessed"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
